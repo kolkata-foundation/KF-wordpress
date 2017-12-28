@@ -1,0 +1,41 @@
+<?php
+/**
+ * Template Name: About Us Page Template
+ *
+ * Description: A page template that provides a key component of WordPress as a CMS
+ * by meeting the need for a carefully crafted introductory page. The front page template
+ * in Twenty Twelve consists of a page content area for adding text, images, video --
+ * anything you'd like -- followed by front-page-only widgets in one or two columns.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
+ */
+
+get_header(); ?>
+
+    <?php while ( have_posts() ) : the_post(); ?>
+        <div class="main-container about-us-banner">
+            <!-- <img src="images/about_banner.jpg" alt="banner-image" class="img-responsive"> -->
+            <?php if ( has_post_thumbnail() ) : ?>        
+               <?php the_post_thumbnail(); ?>
+            <?php endif; ?>
+        </div>
+
+        <div class="main-container">
+            <div class="about-menu">
+                <?php wp_nav_menu( array( 'theme_location' => 'about-us-page-menu' ) ); ?>
+            </div>
+        </div> 
+
+        <div class="main-container about-content">
+            <div class="row">
+                <div class="col-lg-12">
+                   <?php the_content(); ?>
+                </div>
+            </div>
+        </div> 
+    <?php endwhile; // end of the loop. ?>
+    	
+<?php // get_sidebar( 'front' ); ?>
+<?php get_footer(); ?>

@@ -1,0 +1,54 @@
+<?php
+/**
+ * Template Name: Donate Page Template
+ *
+ * Description: A page template that provides a key component of WordPress as a CMS
+ * by meeting the need for a carefully crafted introductory page. The front page template
+ * in Twenty Twelve consists of a page content area for adding text, images, video --
+ * anything you'd like -- followed by front-page-only widgets in one or two columns.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
+ */
+
+get_header(); ?>
+
+<?php
+require_once('vendor/autoload.php');
+
+$stripe = array(
+  "secret_key"      => "sk_test_mxjmToQ6VbCGBu89fj4GVFvs",
+  "publishable_key" => "pk_test_iIeycUJttWAHKFJVe0fJuJWX"
+);
+
+\Stripe\Stripe::setApiKey($stripe['secret_key']);
+?>
+
+    <div class="main-container donation-form" xmlns="http://www.w3.org/1999/html">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donation-col text-center">
+                <section class="text-center donate-info">
+                    <?php  while ( have_posts() ) : the_post(); ?>
+                        <?php the_content(); ?>
+                    <?php endwhile; // end of the loop. ?>
+                </section>
+
+                <form method="post" action="http://www.kolkatafoundation.org/cgi-bin/charge.php" class="main-donation-form">
+                    <input type="hidden" name="donation-amount" value=94123>
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_iIeycUJttWAHKFJVe0fJuJWX"
+                        data-amount="9500"
+                        data-name="Kolkata Foundation"
+                        data-description="Donation"
+                        data-zip-code="true"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto">
+                    </script>
+                </form>
+            </div> 
+        </div>
+    </div>
+
+<?php get_footer(); ?>
