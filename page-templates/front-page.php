@@ -49,7 +49,8 @@ get_header(); ?>
     </div> <!-- main-container -->
 
 
-    <div class="main-container ngo-banner">
+    <div class="main-container">
+        <div class="main-container text-center"><h1>Our Programs</h1></div>
         <div class="big-third-left">
             <?php
             $my_id = 306;
@@ -83,6 +84,24 @@ get_header(); ?>
             ?>
         </div>
     </div> <!-- main-container -->
+
+    <div class="clear"></div>
+
+    <div class="container-fluid testimonial"> 
+        <div class="main-container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left quotes">
+                    <h1>Testimonials</h1>
+                    <?php echo do_shortcode('[show_testimonials]'); ?>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-form">
+                    <h1>Join Us</h1>
+                    <?php echo do_shortcode('[contact-form-7 id="70" title="Contact form 1"]'); ?>
+                </div>
+            </div>
+        </div>
+    </div>  
 
 <!--
      <div class="main-container">
@@ -161,23 +180,6 @@ get_header(); ?>
         </div>
     </div>
     ======== END HIDDEN main-container -->
-
-    <div class="container-fluid testimonial">
-        <div class="main-container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left quotes">
-                    <h1>Testimonials</h1>
-                    <?php echo do_shortcode('[show_testimonials]'); ?>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-form">
-                    <h1>Join Us</h1>
-                    <?php echo do_shortcode('[contact-form-7 id="70" title="Contact form 1"]'); ?>
-                </div>
-            </div>
-        </div>
-    </div> 
-    
 
 <?php get_sidebar( 'front' ); ?>
 <?php get_footer(); ?>

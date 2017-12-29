@@ -11,6 +11,7 @@
 ?>
 
 <footer>
+
         <div class="main-container footer">
             <div class="row">
                 <ol>
@@ -18,6 +19,7 @@
                         <h3>Quick Links</h3>
                         <?php wp_nav_menu( array( 'theme_location' => 'quick-link-menu' ) ); ?>
                     </li>
+
                     <li class="foot-2">
                         <h3>Explore NGOs</h3>
                         <?php wp_nav_menu( array( 'theme_location' => 'explore-ngo-menu' ) ); ?>
