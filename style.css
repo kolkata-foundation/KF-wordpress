@@ -167,7 +167,6 @@ p{
 }
  .big-third-left,.big-third-right, .big-third-middle {
      margin-bottom: 10px;
-     margin-top:10px;
      width: 375px;
      height: 275px;
      float:left;
@@ -307,6 +306,20 @@ p{
 .mission .more .fa{
      margin-right:10px;
 }
+.main-container .programs {
+    background-color:#900;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    color:#ffffff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin-top:5px;
+    position: relative;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
 .approach{
      background-color:#ee7e06;
      font-family: 'Josefin Sans', sans-serif;
@@ -318,7 +331,6 @@ p{
      margin-bottom: 15px;
      font-weight: 600;
      position: relative;
-    ;
 }
 .approach h1:after{
      content:"";

@@ -46,11 +46,7 @@ get_header(); ?>
             <?php $impact_id = 141; ?>
             <?php echo get_post($impact_id)->post_content;?>
         </div>
-    </div> <!-- main-container -->
-
-
-    <div class="main-container">
-        <div class="main-container text-center"><h1>Our Programs</h1></div>
+        <div class="programs">Our Programs</div>
         <div class="big-third-left">
             <?php
             $my_id = 306;
