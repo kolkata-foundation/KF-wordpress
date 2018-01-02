@@ -134,6 +134,7 @@ p{
 }
 .menubar{
      background-color: #333333;
+     margin-top: 10px;
 }
 .menubar ul{
      list-style-type:none;
@@ -162,6 +163,17 @@ p{
      background-color:#02b9db;
 }
 /*---------------------------------------------- NGO Banner-----------------------------------------------*/
+
+.next-steps li {
+    color: yellow;
+    font-size: 30px;
+}
+.ngo-page-banner {
+    background-color:powderblue;
+    margin-left: 0px;
+    width: 1140px;
+}
+
 .ngo-banner{
      margin-top:5px;
 }

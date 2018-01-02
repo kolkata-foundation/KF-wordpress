@@ -87,8 +87,18 @@ get_header(); ?>
         <div class="main-container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left quotes">
-                    <h1>Testimonials</h1>
-                    <?php echo do_shortcode('[show_testimonials]'); ?>
+                    <!-- <h1>Testimonials</h1>
+                        <?php echo do_shortcode('[show_testimonials]'); ?> 
+                     -->
+                    <h1>Next steps: easy as 1, 2, 3 ...</h1>
+                    <div class="next-steps"> 
+                      <ol>
+                        <li>Follow our journey - <a href="http://www.facebook.com/kolkatafoundation/"><img src="http://kolkatafoundation.org/wp-content/uploads/2018/01/download.png" height="30px"></a> us on Facebook
+                         <li>Spread the word - tell your friends about us
+                         <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need 
+                         <li>See first hand - visit our NGOs when in Kolkata
+                      </ol>
+                    </div>
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-form">

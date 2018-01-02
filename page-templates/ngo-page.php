@@ -32,7 +32,7 @@ get_header(); ?>
     }
 ?>
     <div class="main-container">
-        <div class="row">
+        <div class="row ngo-page-banner">
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 text-center ngo-title">
                 <h1><a href="#"><?php echo $result[0]->ngo_name; ?></a></h1>
                 <h3><?php echo $result[0]->ngo_mission; ?></h3>
@@ -242,10 +242,9 @@ get_header(); ?>
                               <?php }
                                 } ?>
                         </div>
-                    </div>
-                </div>
+                    </div><!-- my-tab-content -->
+                </div><!-- donate-form-container -->
             </div> <!-- col-3 -->
-        <?php ?>
         </div>
     </div>
 
