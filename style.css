@@ -198,7 +198,7 @@ p{
      font-size:32;
      transition: all .3s ease-in;
 }
- .exlpore-bar{
+ .explore-bar{
      background-color:#333333;
      height:44px;
      width: 100%;
@@ -207,60 +207,60 @@ p{
      padding-top: 12px;
      margin-top: 5px;
 }
-.exlpore-bar ul{
+.explore-bar ul{
      padding-left:35px;
      list-style-type: none;
      display:flex;
      margin-bottom:0;
 }
-.exlpore-bar ul li{
+.explore-bar ul li{
      display: inline-block;
      border-left:1px solid #4f4f4f;
      border-right:1px solid #1b1b1b;
      padding: 0px 41px 0px 41px;
 }
-.exlpore-bar ul li:nth-of-type(1){
+.explore-bar ul li:nth-of-type(1){
      border:none;
      padding-left: 0;
      padding-right: 75px;
 }
-.exlpore-bar ul li:nth-of-type(1) a{
+.explore-bar ul li:nth-of-type(1) a{
      text-transform:inherit;
      font-size:15px;
      color:#000000;
 }
-.exlpore-bar ul li:nth-of-type(1) a:hover{
+.explore-bar ul li:nth-of-type(1) a:hover{
      color:#000000;
      text-decoration:none;
      cursor:default;
 }
-.exlpore-bar ul li:nth-of-type(2){
+.explore-bar ul li:nth-of-type(2){
      border-left:0;
 }
-.exlpore-bar ul li:last-of-type{
+.explore-bar ul li:last-of-type{
      border-right:0;
 }
-.exlpore-bar ul li a{
+.explore-bar ul li a{
      text-transform: uppercase;
      color:#ffffff;
      font-size: 15px;
 }
-.exlpore-bar ul li a:hover,.exlpore-bar ul li.current-menu-item a{
+.explore-bar ul li a:hover,.explore-bar ul li.current-menu-item a{
      color:#fdbd04;
 }
-.impact-ribbion{
+.impact-ribbon{
      background-image:url(images/gray-panel-img.png);
      margin-top: 5px;
      padding-top: 21px;
      padding-bottom:15px;
 }
-.impact-ribbion ul{
+.impact-ribbon ul{
      list-style-type: none;
      padding-left: 0;
      display: flex;
      margin-bottom: 0;
 }
-.impact-ribbion ul li{
+.impact-ribbon ul li{
      display: inline-block;
      text-align: center;
      padding: 0px 25px 0px 25px;
@@ -268,24 +268,24 @@ p{
      border-left: 1px dotted #969696;
      border-right: 1px dotted #565656;
 }
-.impact-ribbion ul li:first-of-type{
+.impact-ribbon ul li:first-of-type{
      border-left: none;
 }
-.impact-ribbion ul li:last-of-type{
+.impact-ribbon ul li:last-of-type{
      border-right: none;
 }
-.impact-ribbion ul li h1,.impact-ribbion ul li p{
+.impact-ribbon ul li h1,.impact-ribbon ul li p{
      font-family: 'Josefin Sans', sans-serif;
 }
-.impact-ribbion ul li h1{
+.impact-ribbon ul li h1{
      margin-top:0px;
      margin-bottom: 0px;
      font-size:48px;
 }
-.impact-ribbion ul li h1 span{
+.impact-ribbon ul li h1 span{
      font-size:24px;
 }
-.impact-ribbion ul li p{
+.impact-ribbon ul li p{
      font-weight:300;
      font-size:20px;
      margin-bottom: 15px;
@@ -805,13 +805,13 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 .ngo-page-content{
      padding-bottom:60px;
 }
-.ngo-page-content .impact-ribbion ul li h1{
+.ngo-page-content .impact-ribbon ul li h1{
      font-size:32px;
 }
-.ngo-page-content .impact-ribbion p{
+.ngo-page-content .impact-ribbon p{
      font-size:18px;
 }
-.ngo-page-content .impact-ribbion ul li{
+.ngo-page-content .impact-ribbon ul li{
      padding:0px 20px 0px 20px;
 }
 .ngo-page-content table th{
@@ -1478,7 +1478,7 @@ header,footer,.donation-col{
      font-family: 'Josefin Sans', sans-serif;
 }
 /* --------------------------------------------------------- Category Page------------------------------------------------------------*/
-.category-bar .exlpore-bar{
+.category-bar .explore-bar{
      margin-bottom:30px;
 }
 .category-box{
@@ -1563,14 +1563,14 @@ header,footer,.donation-col{
      font-family: 'Open Sans', sans-serif;
      text-align:center;
 }
-.ngo-summery img{
+.ngo-summary img{
      float:left;
      width:220px;
      height:259px;
      margin-right:10px;
      margin-bottom: 10px;
 }
-.ngo-summery p{
+.ngo-summary p{
      margin-bottom:3px;
      line-height:21px;
      font-size:14px;
@@ -1605,6 +1605,7 @@ header,footer,.donation-col{
      padding: 5px 15px 5px 25px;
      border-bottom: 1px solid #ffffff;
      border-right: 1px solid #ffffff;
+     height: 150px;
 }
 .subblock1 p, .subblock2 p{
      color:#ffffff;
@@ -1813,16 +1814,14 @@ div.wpcf7-mail-sent-ok{
      .social{
          margin-top:3px;
     }
-     .exlpore-bar{
+     .explore-bar{
          background-image:none;
          height:auto;
          padding-top: 0;
          padding-bottom: 10px;
     }
-     .exlpore-bar ul, 
-    /*.impact-ribbion ul, .impact-ribbion ul li, .exlpore-bar ul li, */
+     .explore-bar ul, 
      .approach-tabs ul, .corporate ul, .news ul, 
-    /* .international ul, */
      .newsletter ul{
          display:block;
          border:none;
@@ -1830,26 +1829,26 @@ div.wpcf7-mail-sent-ok{
          padding-right: 0;
          width: 100%;
     }
-     .exlpore-bar ul li{
+     .explore-bar ul li{
          padding: 15px 20px;
          text-align: center;
          margin-bottom: 10px;
          display: inline-block;
          border: none;
     }
-     .exlpore-bar ul li:first-of-type{
+     .explore-bar ul li:first-of-type{
          background-color:#fdbd04;
          text-align: center;
          padding-right: 0px;
          display: block;
     }
-     .impact-ribbion{
+     .impact-ribbon{
          background-image:none;
          padding-top: 0;
          background-color: #8f8f8f;
          padding-bottom: 0;
     }
-     .impact-ribbion ul li{
+     .impact-ribbon ul li{
          width: 80%;
          margin: 0 auto;
          display: block;
@@ -1857,10 +1856,10 @@ div.wpcf7-mail-sent-ok{
          border-top: 1px dotted #969696;
          border-bottom: 1px dotted #565656;
     }
-     .impact-ribbion ul li:first-of-type{
+     .impact-ribbon ul li:first-of-type{
          border-top: none;
     }
-     .impact-ribbion ul li:last-of-type{
+     .impact-ribbon ul li:last-of-type{
          border-bottom: none;
     }
      .mission {
@@ -1937,14 +1936,14 @@ div.wpcf7-mail-sent-ok{
     }
 }
 @media only screen and (max-width: 550px){
-     .impact-ribbion ul{
+     .impact-ribbon ul{
          width:90%;
          margin-left:5%;
          display: block;
          padding-top: 15px;
          padding-bottom: 15px;
     }
-     .impact-ribbion ul li{
+     .impact-ribbon ul li{
          width: 48%!important;
          display: inline-block!important;
          padding: 0px 10px 5px 10px!important;
@@ -1966,7 +1965,7 @@ div.wpcf7-mail-sent-ok{
      .logo-col img{
          margin:0 auto;
     }
-     .ngo-page-content .impact-ribbion ul li{
+     .ngo-page-content .impact-ribbon ul li{
          padding-top:25px;
          padding-bottom:15px;
     }
@@ -2041,7 +2040,7 @@ div.wpcf7-mail-sent-ok{
      .block1, .block2, .block3, .block4{
          width:100%;
     }
-     .ngo-summery img{
+     .ngo-summary img{
          float: none;
          margin: 0 auto 10px auto;
     }
@@ -2074,10 +2073,10 @@ div.wpcf7-mail-sent-ok{
      .subblock4 .office span{
          margin-left:26%;
     }
-     .ngo-page-content .impact-ribbion ul li h1{
+     .ngo-page-content .impact-ribbon ul li h1{
          font-size:30px;
     }
-     .ngo-page-content .impact-ribbion p{
+     .ngo-page-content .impact-ribbon p{
          font-size:14px;
     }
 }
@@ -2085,7 +2084,7 @@ div.wpcf7-mail-sent-ok{
      .block1, .block2, .block3, .block4{
          width:100%;
     }
-     .ngo-summery img{
+     .ngo-summary img{
          float: none;
          margin: 0 auto 10px auto;
     }
@@ -2115,7 +2114,7 @@ div.wpcf7-mail-sent-ok{
      .logo-col img{
          margin:0 auto;
     }
-     .ngo-page-content .impact-ribbion ul li{
+     .ngo-page-content .impact-ribbon ul li{
          padding-top:25px;
          padding-bottom:15px;
     }
@@ -2192,16 +2191,16 @@ div.wpcf7-mail-sent-ok{
      .big-half-right .small-thumb:nth-of-type(1), .big-half-right .small-thumb:nth-of-type(2){
          margin-top:5px;
     }
-     .exlpore-bar{
+     .explore-bar{
          background-image:none;
          height:auto;
          padding-top: 0;
          padding-bottom: 10px;
     }
-     .exlpore-bar ul,
-    /* .impact-ribbion ul, */
-     .impact-ribbion ul li,
-    /* .exlpore-bar ul li, */
+     .explore-bar ul,
+    /* .impact-ribbon ul, */
+     .impact-ribbon ul li,
+    /* .explore-bar ul li, */
      .approach-tabs ul, .corporate ul, .news ul,
     /* .international ul, */
      .newsletter ul{
@@ -2211,26 +2210,26 @@ div.wpcf7-mail-sent-ok{
          padding-right: 0;
          width: 100%;
     }
-     .exlpore-bar ul li{
+     .explore-bar ul li{
          padding: 15px 25px;
          text-align: center;
          margin-bottom: 10px;
          display: inline-block;
          border: none;
     }
-     .exlpore-bar ul li:first-of-type{
+     .explore-bar ul li:first-of-type{
          background-color:#fdbd04;
          text-align: center;
          padding-right: 0px;
          display: block;
     }
-     .impact-ribbion{
+     .impact-ribbon{
          background-image:none;
          padding-top: 0;
          background-color: #8f8f8f;
          padding-bottom: 0;
     }
-     .impact-ribbion ul li{
+     .impact-ribbon ul li{
          width: 80%;
          margin: 0 auto;
          display: block;
@@ -2238,10 +2237,10 @@ div.wpcf7-mail-sent-ok{
          border-top: 1px dotted #969696;
          border-bottom: 1px dotted #565656;
     }
-     .impact-ribbion ul li:first-of-type{
+     .impact-ribbon ul li:first-of-type{
          border-top: none;
     }
-     .impact-ribbion ul li:last-of-type{
+     .impact-ribbon ul li:last-of-type{
          border-bottom: none;
     }
      .mission {
@@ -2341,34 +2340,34 @@ div.wpcf7-mail-sent-ok{
      .big-half-right .small-thumb{
          width: 49.6%;
     }
-     .exlpore-bar{
+     .explore-bar{
          height:41px;
          padding-top: 10px;
          margin-top: 5px;
          background-size: 138px 41px;
     }
-     .exlpore-bar ul li span{
+     .explore-bar ul li span{
          font-size:12px;
     }
-     .exlpore-bar ul li:nth-of-type(1){
+     .explore-bar ul li:nth-of-type(1){
          padding-right: 41px;
     }
-     .exlpore-bar ul{
+     .explore-bar ul{
          padding-left:21px;
     }
-     .exlpore-bar ul li{
+     .explore-bar ul li{
          padding: 0px 20px 0px 20px;
     }
-     .exlpore-bar ul li a{
+     .explore-bar ul li a{
          font-size:13px;
     }
-     .impact-ribbion ul li{
+     .impact-ribbon ul li{
          padding: 0px 21px 0px 21px;
     }
-     .impact-ribbion ul li h1{
+     .impact-ribbon ul li h1{
          font-size:36px;
     }
-     .impact-ribbion ul li p{
+     .impact-ribbon ul li p{
          font-size:11px;
     }
      .news ul li h2{
@@ -2430,35 +2429,35 @@ div.wpcf7-mail-sent-ok{
      .big-half-left h2{
          font-size:26px;
     }
-    /* .exlpore-bar{
+    /* .explore-bar{
  *          height:41px;
  *                   padding-top: 10px;
  *                            margin-top: 5px;
  *                                     background-size: 138px 41px;
  *                                         }
- *                                              .exlpore-bar ul li span{
+ *                                              .explore-bar ul li span{
  *                                                       font-size:12px;
  *                                                           }
- *                                                                .exlpore-bar ul li:nth-of-type(1){
+ *                                                                .explore-bar ul li:nth-of-type(1){
  *                                                                         padding-right: 41px;
  *                                                                             }
- *                                                                                  .exlpore-bar ul{
+ *                                                                                  .explore-bar ul{
  *                                                                                           padding-left:21px;
  *                                                                                               }
  *                                                                                                    */
-     .exlpore-bar ul li{
+     .explore-bar ul li{
          padding: 0px 35px 0px 35px;
     }
-     .exlpore-bar ul li a{
+     .explore-bar ul li a{
          font-size:13px;
     }
-     .impact-ribbion ul li{
+     .impact-ribbon ul li{
          padding: 0px 26px 0px 26px;
     }
-     .impact-ribbion ul li h1{
+     .impact-ribbon ul li h1{
          font-size:45px;
     }
-     .impact-ribbion ul li p{
+     .impact-ribbon ul li p{
          font-size:15px;
     }
      .news ul li h2{
@@ -2473,13 +2472,13 @@ div.wpcf7-mail-sent-ok{
      .donate-form-container .nav-tabs>li>a{
          padding: 10px 21px 10px 20px;
     }
-     .ngo-page-content .impact-ribbion ul li {
+     .ngo-page-content .impact-ribbon ul li {
          padding: 0px 10px 0px 10px;
     }
-     .ngo-page-content .impact-ribbion ul li h1 {
+     .ngo-page-content .impact-ribbon ul li h1 {
          font-size: 26px;
     }
-     .ngo-page-content .impact-ribbion ul li:last-of-type h1{
+     .ngo-page-content .impact-ribbon ul li:last-of-type h1{
          padding: 10px 8px;
     }
      .donate-form-container .tab-content .donate-cause .cause{
@@ -2490,18 +2489,18 @@ div.wpcf7-mail-sent-ok{
          padding:12px 10.5px;
          font-size:18px;
     }
-     .ngo-summery img {
+     .ngo-summary img {
          width: 180px;
          height: 245px;
     }
      .block1, .block2, .block3, .block4 {
          width: 36.9%;
     }
-     .ngo-summery p{
+     .ngo-summary p{
          font-size:13px;
          line-height: 19px;
     }
-     .tabbed .ngo-summery p{
+     .tabbed .ngo-summary p{
          font-size:13px;
          line-height: 19px;
     }
@@ -2511,7 +2510,7 @@ div.wpcf7-mail-sent-ok{
     }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1200px){
-     .impact-ribbion ul li h1{
+     .impact-ribbon ul li h1{
          font-size:45px;
     }
      .social li a{
@@ -2527,10 +2526,10 @@ div.wpcf7-mail-sent-ok{
      .donate-form-container .nav-tabs>li>a{
          padding: 10px 29px 10px 29px;
     }
-     .ngo-page-content .impact-ribbion ul li h1 {
+     .ngo-page-content .impact-ribbon ul li h1 {
          font-size: 26px;
     }
-     .ngo-page-content .impact-ribbion ul li {
+     .ngo-page-content .impact-ribbon ul li {
          padding: 0px 15px 0px 15px;
     }
      .donate-form-container .tab-content .donate-cause .cause{
@@ -2540,18 +2539,18 @@ div.wpcf7-mail-sent-ok{
      .tabbed .nav-tabs li a{
          padding:10px 12px;
     }
-     .ngo-summery img {
+     .ngo-summary img {
          width: 180px;
          height: 245px;
     }
      .block1, .block2, .block3, .block4 {
          width: 36.9%;
     }
-     .ngo-summery p{
+     .ngo-summary p{
          font-size:13px;
          line-height: 19px;
     }
-     .tabbed .ngo-summery p{
+     .tabbed .ngo-summary p{
          font-size:13px;
          line-height: 19px;
     }

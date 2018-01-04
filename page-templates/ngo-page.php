@@ -69,7 +69,7 @@ get_header(); ?>
                          !$result[0]->ngo_impact_title_two == "" || 
                          !$result[0]->ngo_impact_title_three == "" || 
                          !$result[0]->ngo_impact_title_four == ""){ ?>
-                <div class="impact-ribbion">
+                <div class="impact-ribbon">
                     <ul>
                         <li>
                             <h1><?php echo $result[0]->ngo_impact_value_one; ?></h1>
@@ -144,7 +144,7 @@ get_header(); ?>
                     <div class="tab-pane active text-left" id="overview">
                         <div class="ngo">
                             <!-- <h4><?php // echo $result[0]->ngo_mission; ?></h4> -->
-                            <div class="ngo-summery">
+                            <div class="ngo-summary">
                                 <div class="block1">
                                     <div class="existance">Years in existence: <?php echo $result[0]->years_in_existence; ?></div>
                                     <div class="subblock1">
@@ -226,26 +226,24 @@ get_header(); ?>
                     <?php } ?>
                 </div>
             </div> <!-- col-8 -->
-
    
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center donate-col">
                 <div class="donate-form-container">
                     <div><h3>Impact</h3></div>
                     <div id="my-tab-content" class="tab-content">
                         <div class="tab-pane active" id="donate-once">
-                              <?php  for($j=0;$j<10;$j++) { ?>
-                                <?php if ($result[0]->$cause_array[$j] != "") { ?>
-                                  <div class="donate-cause" href="#">
-                                            <span class="amount"><?php echo $result[0]->$cause_amount_array[$j]; ?></span>
-                                            <span class="cause"> <?php echo $result[0]->$cause_array[$j]; ?> </span>
-                                  </div>
+                           <?php for($j=0;$j<10;$j++) { ?>
+                           <?php   if ($result[0]->$cause_array[$j] != "") { ?>
+                                     <div class="donate-cause" href="#">
+                                       <span class="amount"><?php echo $result[0]->$cause_amount_array[$j]; ?></span>
+                                       <span class="cause"> <?php echo $result[0]->$cause_array[$j]; ?> </span>
+                                      </div>
                               <?php }
                                 } ?>
                         </div>
                     </div><!-- my-tab-content -->
                 </div><!-- donate-form-container -->
-            </div> <!-- col-3 -->
-        </div>
-    </div>
+            </div><!-- col-lg-4 -->
+    </div><!-- main-container -->
 
 <?php get_footer(); ?>

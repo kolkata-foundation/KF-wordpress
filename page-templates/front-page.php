@@ -42,7 +42,7 @@ get_header(); ?>
     </div> <!-- container-fluid -->
 
     <div class="main-container">
-        <div class="impact-ribbion">
+        <div class="impact-ribbon">
             <?php $impact_id = 141; ?>
             <?php echo get_post($impact_id)->post_content;?>
         </div>
@@ -111,7 +111,7 @@ get_header(); ?>
 
 <!--
      <div class="main-container">
-       <div class="exlpore-bar">
+       <div class="explore-bar">
         <?php wp_nav_menu( array( 'theme_location' => 'explore-ngo-top-menu' ) ); ?> 
        </div>
      </div> 

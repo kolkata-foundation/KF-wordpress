@@ -12,7 +12,7 @@ $ngo_category = $wp_query->query_vars['pagetype'];
     </div>
 
     <div class="main-container category-bar">
-        <div class="exlpore-bar">
+        <div class="explore-bar">
             <?php wp_nav_menu( array( 'theme_location' => 'explore-ngo-top-menu' ) ); ?>
         </div>
     </div> <!-- main-container -->
@@ -30,7 +30,7 @@ $ngo_category = $wp_query->query_vars['pagetype'];
                 <div class="ngo">
                     <h3><a href="<?php echo get_site_url(); ?>/ngo/<?php echo $row->ngo_slug; ?>"><?php echo $row->ngo_name; ?><span>Learn More <i class="fa fa-angle-double-right"></i></span></a></h3>
                     <h4><?php echo $row->ngo_mission; ?></h4>
-                    <div class="ngo-summery">
+                    <div class="ngo-summary">
                         <?php echo stripslashes($row->ngo_image); ?>
                         <div class="block1">
                             <div class="existance">Years in existence: <?php echo $row->years_in_existence; ?></div>
