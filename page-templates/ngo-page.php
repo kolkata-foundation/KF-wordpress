@@ -33,18 +33,15 @@ get_header(); ?>
 ?>
     <div class="main-container">
         <div class="row ngo-page-banner">
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 text-center ngo-title">
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center ngo-title">
                 <h1><a href="#"><?php echo $result[0]->ngo_name; ?></a></h1>
                 <h3><?php echo $result[0]->ngo_mission; ?></h3>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center ngo-title">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center ngo-title">
                 <ul class="social">
                     <?php if(!$result[0]->ngo_facebook_url == ""){
                         echo '<li class="fb"><a href="'.$result[0]->ngo_facebook_url.'" target="_blank"><i class="fa fa-facebook"></i></a></li>'; }
-
-                    if(!$result[0]->ngo_youtube_url == ""){
-                        echo '<li class="yt"><a href="'.$result[0]->ngo_youtube_url.'" target="_blank"><i class="fa fa-youtube"></i></a></li>'; }
 
                     if(!$result[0]->ngo_website_url == ""){
                         echo '<li class="web"><a href="'.$result[0]->ngo_website_url.'" target="_blank"><i class="fa fa-globe"></i></a></li>'; }
@@ -55,6 +52,7 @@ get_header(); ?>
     </div>
 
     <div class="main-container ngo-page-content">
+      <div class="row">
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 tabbed">
                 <?php if(!$result[0]->ngo_home_image == ""){ ?>
                 <?php
@@ -229,7 +227,7 @@ get_header(); ?>
    
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center donate-col">
                 <div class="donate-form-container">
-                    <div><h3>Impact</h3></div>
+                    <div class="donate-btn">Impact</div>
                     <div id="my-tab-content" class="tab-content">
                         <div class="tab-pane active" id="donate-once">
                            <?php for($j=0;$j<10;$j++) { ?>
@@ -242,8 +240,11 @@ get_header(); ?>
                                 } ?>
                         </div>
                     </div><!-- my-tab-content -->
+                    <div class="indian-donors">Indian donors, please donate directly</div>
                 </div><!-- donate-form-container -->
+
             </div><!-- col-lg-4 -->
+        </div><!-- row -->
     </div><!-- main-container -->
 
 <?php get_footer(); ?>

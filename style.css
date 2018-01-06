@@ -111,6 +111,16 @@ p{
      text-decoration:none!important;
      font-family: 'Josefin Sans', sans-serif;
 }
+
+.indian-donors {
+     background-color: #006;
+     color: #ffffff!important;
+     padding: 8px 15px;
+     font-size: 20px;
+     text-decoration:none!important;
+     font-family: 'Josefin Sans', sans-serif;
+}
+
 .right-head .about-text{
      font-size:13px;
      margin-top: 12px;
@@ -165,8 +175,12 @@ p{
 /*---------------------------------------------- NGO Banner-----------------------------------------------*/
 
 .next-steps li {
-    color: yellow;
+    color: white;
     font-size: 30px;
+}
+
+.next-steps li a {
+    color: red;
 }
 .ngo-page-banner {
     background-color:powderblue;
@@ -179,12 +193,13 @@ p{
 }
  .big-third-left,.big-third-right, .big-third-middle {
      margin-bottom: 10px;
-     width: 375px;
+     width: 376px;
      height: 275px;
      float:left;
 }
+
  .big-third-left, .big-third-middle {
-     margin-right:7px;
+     margin-right:6px;
      position: relative;
      overflow:hidden;
 }
@@ -326,10 +341,14 @@ p{
     text-align: center;
     font-weight: 600;
     font-size: 40px;
-    margin-top:5px;
+    margin-top:10px;
     position: relative;
-    padding-top:10px;
+    padding-top:15px;
     padding-bottom:10px;
+}
+
+.spacer {
+   padding-top:10px;
 }
 
 .approach{
@@ -769,7 +788,7 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 }
 /*---------------------------------------------- NGO Template Page-----------------------------------------------*/
 .ngo-title{
-     margin-bottom: 20px;
+     margin-bottom: 10px;
 }
 .ngo-title h3{
      color: #ed3222;
@@ -787,9 +806,8 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
      float: right;
      margin-top: 36px;
      padding: 19px 20px;
-    /* border: 1px solid #e1e1e1;
- *      */
 }
+
 .ngo-title .social li{
      margin-right: 5px;
 }
@@ -805,6 +823,7 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 .ngo-page-content{
      padding-bottom:60px;
 }
+
 .ngo-page-content .impact-ribbon ul li h1{
      font-size:32px;
 }
@@ -881,7 +900,7 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
      font-family: 'Roboto', sans-serif!important;
      color:#333333!important;
      margin-right: 12px;
-     padding: 10px 33px 10px 34.6px;
+     padding: 10px 10px 10px 10px;
 }
 .donate-form-container .nav-tabs>li:last-of-type > a{
      margin-right: 0px;
@@ -897,7 +916,7 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 .donate-form-container .tab-content{
      border: 1px solid #e1e1e1;
      border-top-color: transparent;
-     padding: 10px 15px;
+     padding: 10px 10px;
      position: relative;
 }
 .tabbed iframe{
@@ -936,7 +955,7 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
      font-weight: 500;
 }
  .donate-form-container .tab-content .donate-cause .cause{
-     width: 60%;
+     width: 75%;
      background-color: #ececec;
      padding: 16px 7px;
      display: inline-block;
@@ -945,6 +964,7 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
      vertical-align: middle;
      float: left;
      height: 88px;
+     font-size: 18px;
 }
 .donate-form-container .tab-content .new-amt-box .cause{
      width: 85%;
@@ -1040,7 +1060,11 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 }
 .tabbed .tab-pane{
      padding-top: 25px;
+     font-size: 18px;
+     font-family: 'Josefin-Sans', sans-serif;
 }
+
+
 /*.tabbed #overview h2,.tabbed #metrics h2,.tabbed #financials h2,.tabbed #photos h2,.tabbed #media h2,.tabbed #photos h2{
  *      font-family: 'Josefin Sans', sans-serif;
  *           margin-bottom: 25px;
@@ -1605,7 +1629,8 @@ header,footer,.donation-col{
      padding: 5px 15px 5px 25px;
      border-bottom: 1px solid #ffffff;
      border-right: 1px solid #ffffff;
-     height: 150px;
+     height: 110px;
+     font-size: 16px;
 }
 .subblock1 p, .subblock2 p{
      color:#ffffff;

@@ -15,7 +15,7 @@
 get_header(); ?>
 
     <div class="main-container ngo-banner">
-      <img src="http://kolkatafoundation.org/wp-content/uploads/2017/12/kf-story-1.gif">
+      <img src="http://kolkatafoundation.org/wp-content/uploads/2018/01/kf-banner1.jpg">
     </div>
 
     <div class="main-container mission">
@@ -47,6 +47,7 @@ get_header(); ?>
             <?php echo get_post($impact_id)->post_content;?>
         </div>
         <div class="programs">Our Programs</div>
+        <div class="spacer"></div>
         <div class="big-third-left">
             <?php
             $my_id = 306;
@@ -86,17 +87,20 @@ get_header(); ?>
     <div class="container-fluid testimonial"> 
         <div class="main-container">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left quotes">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left">
                     <!-- <h1>Testimonials</h1>
                         <?php echo do_shortcode('[show_testimonials]'); ?> 
                      -->
+      
+                    <div class="spacer"></div>
                     <h1>Next steps: easy as 1, 2, 3 ...</h1>
                     <div class="next-steps"> 
                       <ol>
-                        <li>Follow our journey - <a href="http://www.facebook.com/kolkatafoundation/"><img src="http://kolkatafoundation.org/wp-content/uploads/2018/01/download.png" height="30px"></a> us on Facebook
-                         <li>Spread the word - tell your friends about us
-                         <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need 
-                         <li>See first hand - visit our NGOs when in Kolkata
+                        <li>Follow our journey on <a href="http://www.facebook.com/kolkatafoundation/">Facebook</a></li>
+                         <li>Spread the word - tell your friends about us</li>
+                         <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need</li>
+                         <li>See first hand - visit our NGOs when in Kolkata</li>
+                         <li>Join the team - become part of an awesome movement</li>
                       </ol>
                     </div>
                 </div>
