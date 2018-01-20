@@ -58,8 +58,8 @@
                 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right-head">
                     <ul class="social">
-                        <li class="fb"><a href="http://www.facebook.com/kolkatafoundation"><i class="fa fa-facebook"></i></a></li>
-                        <li class="yt"><a href="https://www.youtube.com/watch?v=cM0ITOVAmVA"><i class="fa fa-youtube"></i></a></li>
+                        <li class="fb"><a href="http://www.facebook.com/kolkatafoundation" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li class="yt"><a href="https://www.youtube.com/watch?v=cM0ITOVAmVA" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                     <a href="http://kolkatafoundation.org/donation-form/" class="donate-btn">DONATE</a>
                 </div> <!-- col-lg-3 -->

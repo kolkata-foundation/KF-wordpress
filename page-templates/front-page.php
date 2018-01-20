@@ -46,63 +46,64 @@ get_header(); ?>
             <?php $impact_id = 141; ?>
             <?php echo get_post($impact_id)->post_content;?>
         </div>
-        <div class="programs">Our Programs</div>
+        <div class="programs ">Our Programs</div>
         <div class="spacer"></div>
-        <div class="big-third-left">
-            <?php
-            $my_id = 306;
-            $post_id_5369 = get_post($my_id);
-            $content = $post_id_5369->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace(']]>', ']]>', $content);
-            echo $content;
-            ?>
-        </div>
-        
-        <div class="big-third-middle">
-            <?php
-            $my_id = 325;
-            $post_id_5369 = get_post($my_id);
-            $content = $post_id_5369->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace(']]>', ']]>', $content);
-            echo $content;
-            ?>
-        </div>
-        
-        <div class="big-third-right">
-            <?php
-            $my_id = 322;
-            $post_id_5369 = get_post($my_id);
-            $content = $post_id_5369->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace(']]>', ']]>', $content);
-            echo $content;
-            ?>
-        </div>
-    </div> <!-- main-container -->
+        <div class="row" style="width:1150px">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <?php
+                $my_id = 306;
+                $post_id_5369 = get_post($my_id);
+                $content = $post_id_5369->post_content;
+                $content = apply_filters('the_content', $content);
+                $content = str_replace(']]>', ']]>', $content);
+                echo $content;
+              ?>
+          </div>
+         
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <?php
+                  $my_id = 325;
+                  $post_id_5369 = get_post($my_id);
+                  $content = $post_id_5369->post_content;
+                  $content = apply_filters('the_content', $content);
+                  $content = str_replace(']]>', ']]>', $content);
+                  echo $content;
+                ?>
+           </div> 
 
-    <div class="clear"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                 <?php
+                  $my_id = 322;
+                  $post_id_5369 = get_post($my_id);
+                  $content = $post_id_5369->post_content;
+                  $content = apply_filters('the_content', $content);
+                  $content = str_replace(']]>', ']]>', $content);
+                  echo $content;
+                ?>
+          </div>
+    </div> <!-- main-container -->
+    <div class="spacer"></div>
 
     <div class="container-fluid testimonial"> 
         <div class="main-container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left">
-                    <!-- <h1>Testimonials</h1>
-                        <?php echo do_shortcode('[show_testimonials]'); ?> 
-                     -->
-      
-                    <div class="spacer"></div>
+                    <div class="spacer"></div> 
+                    <div class="spacer"></div> 
                     <h1>Next steps: easy as 1, 2, 3 ...</h1>
                     <div class="next-steps"> 
                       <ol>
-                        <li>Follow our journey on <a href="http://www.facebook.com/kolkatafoundation/">Facebook</a></li>
-                         <li>Spread the word - tell your friends about us</li>
+                        <li>Follow our journey on <a href="http://www.facebook.com/kolkatafoundation/">Facebook</a> - share with your friends</li>
                          <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need</li>
-                         <li>See first hand - visit our NGOs when in Kolkata</li>
                          <li>Join the team - become part of an awesome movement</li>
                       </ol>
                     </div>
+                    <!--
+                    <div class="spacer"></div> 
+                    <div class="spacer"></div> 
+                    <h1 style='color:yellow'>Testimonials</h1>
+                    <?php echo do_shortcode('[show_testimonials]'); ?> 
+                    -->
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-form">

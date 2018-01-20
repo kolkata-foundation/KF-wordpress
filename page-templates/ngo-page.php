@@ -50,7 +50,7 @@ get_header(); ?>
             </div>
         </div>        
     </div>
-
+    <div class="spacer"/>
     <div class="main-container ngo-page-content">
       <div class="row">
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 tabbed">

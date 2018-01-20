@@ -175,13 +175,15 @@ p{
 /*---------------------------------------------- NGO Banner-----------------------------------------------*/
 
 .next-steps li {
+    font-family: 'Josefin Sans', sans-serif;
     color: white;
-    font-size: 30px;
+    font-size: 23px;
 }
 
 .next-steps li a {
     color: red;
 }
+
 .ngo-page-banner {
     background-color:powderblue;
     margin-left: 0px;
@@ -191,23 +193,15 @@ p{
 .ngo-banner{
      margin-top:5px;
 }
- .big-third-left,.big-third-right, .big-third-middle {
-     margin-bottom: 10px;
-     width: 376px;
-     height: 275px;
-     float:left;
+
+.big-third {
+  width:  375px;
 }
 
- .big-third-left, .big-third-middle {
-     margin-right:6px;
-     position: relative;
-     overflow:hidden;
-}
- .big-third-left h4, .big-third-right h4, .big-third-middle h4 {
-     position: relative;
-     left:20px;
-     bottom:40px;
-     color:yellow;
+.big-third h4 {
+     width: 100%;
+     text-align: center;
+     color:#009;
      font-family: 'Arial', sans-serif;
      font-weight:600;
      font-size:32;
@@ -550,7 +544,7 @@ p{
 }
 /*---------------------------------------------- Testimonial-----------------------------------------------*/
 .testimonial{
-     background-color:#02b9db;
+     background-color: #071e42;
      font-family: 'Josefin Sans', sans-serif;
 }
 .testimonial .quotes,.testimonial .contact-form{
