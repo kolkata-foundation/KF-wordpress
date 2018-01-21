@@ -28,30 +28,30 @@ get_header(); ?>
         </div> <!-- row -->
     </div> <!-- main-container -->
 
-    <div class="container-fluid approach">
-        <div class="main-container text-center">
+    <div class="main-container approach text-center">
             <?php $approach_id = 23; ?>
             <h1><?php echo get_post($approach_id)->post_title; ?><!-- Our Approach --></h1>
-        </div> <!-- main-container -->
     </div> <!-- container-fluid -->
 
-    <div class="container-fluid approach-tabs">
-        <div class="main-container">
+    <div class="main-container approach-tabs">
            <?php echo get_post($approach_id)->post_content;?>
-        </div> <!-- main-container -->
-    </div> <!-- container-fluid -->
+    </div> <!-- main-container -->
 
-    <div class="main-container">
-        <div class="impact-ribbon">
+    <div class="main-container impact-ribbon">
             <?php $impact_id = 141; ?>
             <?php echo get_post($impact_id)->post_content;?>
-        </div>
+    </div>
+
+    <div class="main-container">
         <div class="programs ">Our Programs</div>
         <div class="spacer"></div>
-        <div class="row" style="width:1150px">
+    </div>
+
+    <div class="main-container">
+      <div class="row" style="width:100%">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
               <?php
-                $my_id = 306;
+                $my_id = 322;
                 $post_id_5369 = get_post($my_id);
                 $content = $post_id_5369->post_content;
                 $content = apply_filters('the_content', $content);
@@ -69,48 +69,48 @@ get_header(); ?>
                   $content = str_replace(']]>', ']]>', $content);
                   echo $content;
                 ?>
-           </div> 
+          </div>
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                 <?php
-                  $my_id = 322;
+              <?php
+                  $my_id = 306;
                   $post_id_5369 = get_post($my_id);
                   $content = $post_id_5369->post_content;
                   $content = apply_filters('the_content', $content);
                   $content = str_replace(']]>', ']]>', $content);
                   echo $content;
-                ?>
+              ?>
           </div>
+      </div>
     </div> <!-- main-container -->
+
     <div class="spacer"></div>
 
-    <div class="container-fluid testimonial"> 
-        <div class="main-container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left">
-                    <div class="spacer"></div> 
-                    <div class="spacer"></div> 
-                    <h1>Next steps: easy as 1, 2, 3 ...</h1>
-                    <div class="next-steps"> 
-                      <ol>
-                        <li>Follow our journey on <a href="http://www.facebook.com/kolkatafoundation/">Facebook</a> - share with your friends</li>
-                         <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need</li>
-                         <li>Join the team - become part of an awesome movement</li>
-                      </ol>
-                    </div>
-                    <!--
+    <div class="main-container testimonial">
+        <div class="row" style="width:100%">
+           <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left">
+             <div style="padding-top: 20px; padding-left: 10px">
+                 <h1>Next steps: easy as 1, 2, 3</h1>
+             </div>
+             <div class="next-steps"> 
+               <ol>
+                   <li>Follow our journey on <a href="http://www.facebook.com/kolkatafoundation/">Facebook</a> - share with your friends</li>
+                   <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need</li>
+                   <li>Join the team - become part of an awesome movement</li>
+                 </ol>
+               </div>
+               <!--
                     <div class="spacer"></div> 
                     <div class="spacer"></div> 
                     <h1 style='color:yellow'>Testimonials</h1>
                     <?php echo do_shortcode('[show_testimonials]'); ?> 
-                    -->
-                </div>
+               -->
+             </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-form">
-                    <h1>Join Us</h1>
-                    <?php echo do_shortcode('[contact-form-7 id="70" title="Contact form 1"]'); ?>
-                </div>
-            </div>
+             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-form">
+               <h1>Join Us</h1>
+               <?php echo do_shortcode('[contact-form-7 id="70" title="Contact form 1"]'); ?>
+             </div>
         </div>
     </div>  
 
