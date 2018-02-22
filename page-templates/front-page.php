@@ -15,7 +15,8 @@
 get_header(); ?>
 
     <div class="main-container ngo-banner">
-      <img src="http://kolkatafoundation.org/wp-content/uploads/2018/01/kf-banner1.jpg">
+    <!--  <img src="http://kolkatafoundation.org/wp-content/uploads/2018/01/kf-banner1.jpg"> -->
+		<?php echo do_shortcode('[metaslider id="778"]'); ?>
     </div>
 
     <div class="main-container mission">
@@ -44,12 +45,11 @@ get_header(); ?>
 
     <div class="main-container">
         <div class="programs ">Our Programs</div>
-        <div class="spacer"></div>
     </div>
 
-    <div class="main-container">
+    <div class="main-container programs-gallery">
       <div class="row" style="width:100%">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 one">
               <?php
                 $my_id = 322;
                 $post_id_5369 = get_post($my_id);
@@ -60,7 +60,7 @@ get_header(); ?>
               ?>
           </div>
          
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 two">
               <?php
                   $my_id = 325;
                   $post_id_5369 = get_post($my_id);
@@ -71,7 +71,7 @@ get_header(); ?>
                 ?>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 three">
               <?php
                   $my_id = 306;
                   $post_id_5369 = get_post($my_id);
@@ -84,12 +84,10 @@ get_header(); ?>
       </div>
     </div> <!-- main-container -->
 
-    <div class="spacer"></div>
-
     <div class="main-container testimonial">
         <div class="row" style="width:100%">
            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-left">
-             <div style="padding-top: 20px; padding-left: 10px">
+             <div class="next-title">
                  <h1>Next steps: easy as 1, 2, 3</h1>
              </div>
              <div class="next-steps"> 

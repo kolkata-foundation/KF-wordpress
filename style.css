@@ -50,10 +50,14 @@ p{
      vertical-align:top!important;
 }
 .top-head{
-     margin-top:25px;
+     margin:20px auto;
 }
 .slogan{
      padding-left:0;
+}
+.top-head .logo-col, .top-head .right-head {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .slogan p{
      font-family: 'Josefin Sans', sans-serif;
@@ -74,19 +78,21 @@ p{
      list-style-type:none;
      padding-left: 0;
      float: left;
-     margin: 8px 0px 0px 8px;
+     margin: 15px 0px 0px 15px;
 }
 .social li{
      display:inline-block;
 }
 .social li a{
-     color:#ffffff;
-     height: 30px;
-     width: 30px;
-     background-color: #4867aa;
-     border-radius: 30px;
-     padding:6px 14px;
-     text-align:center;
+    color:#ffffff;
+    height: 30px;
+    width: 30px;
+    background-color: #4867aa;
+    border-radius: 30px;
+    padding:0px;
+    text-align:center;
+    display: inline-block;
+    line-height: 30px;
 }
 .social li a{
      font-size:18px;
@@ -96,20 +102,21 @@ p{
      padding:6px 10px;
 }
 .social li.web a{
-     padding: 6px 11px;
      background-color: #0cb73a!important;
 }
 .social li.yt a{
      background-color:#da281e;
-     padding:6px 10px;
 }
 .donate-btn{
-     background-color: #ea4335;
-     color: #ffffff!important;
-     padding: 8px 15px;
-     font-size: 24px;
-     text-decoration:none!important;
-     font-family: 'Josefin Sans', sans-serif;
+    background-color: #ea4335;
+    color: #ffffff!important;
+    padding: 10px 25px 7px 25px;
+    margin-top: 9px;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration:none!important;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .indian-donors {
@@ -156,15 +163,17 @@ p{
 }
 .menubar ul li{
      display:inline-block;
-     padding: 8px 35px;
-     border-right: 1px solid #4f4f4f;
-     border-left: 1px solid #1b1b1b;
 }
 .menubar ul li a{
      color:#ffffff;
      text-decoration:none;
      font-size: 15px;
      text-transform: uppercase;
+	letter-spacing: 0.7px;
+    padding: 10px 40px;
+    border-right: 1px solid #4f4f4f;
+    border-left: 1px solid #1b1b1b;
+    display: block;
 }
 .menubar ul li.active{
      background-color:#02b9db;
@@ -173,6 +182,31 @@ p{
      background-color:#02b9db;
 }
 /*---------------------------------------------- NGO Banner-----------------------------------------------*/
+
+.metaslider .caption-wrap {
+    bottom: inherit !important;
+    top: 19% !important;
+    left: 7% !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    width: 50% !important;
+    transition: all 0.7s;
+}
+.metaslider .caption h2 {
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+.metaslider .caption h3 {
+    font-size: 18px;
+    color: #e0fe2e;
+    margin: 0px;
+}
+.metaslider .caption h3 span:first-child {
+    margin-right: 20px;
+}
+
 
 .next-steps li {
     font-family: 'Josefin Sans', sans-serif;
@@ -183,15 +217,13 @@ p{
 .next-steps li a {
     color: red;
 }
-
+.main-container.ngo-banner {
+    background-color: #333333;
+}
 .ngo-page-banner {
     background-color:powderblue;
     margin-left: 0px;
-    width: 1140px;
-}
-
-.ngo-banner{
-     margin-top:5px;
+    width: 100%;
 }
 
 .big-third {
@@ -257,25 +289,39 @@ p{
 .explore-bar ul li a:hover,.explore-bar ul li.current-menu-item a{
      color:#fdbd04;
 }
+.programs-gallery .row, .testimonial .row{
+	margin-right: 0px;
+    margin-left: 0px;
+}
+.programs-gallery .row div{ padding-left:0px; padding-right: 0px;}
+.programs-gallery img {
+    max-width: 100%;
+    height: auto;
+}
+.programs-gallery .two {margin-left: 2.5px;}
+.programs-gallery .three {
+    margin-right: -5px;
+    float: right;
+}
 .impact-ribbon{
      background-image:url(images/gray-panel-img.png);
      width: 100%;
-     margin-top: 5px;
-     padding-top: 21px;
-     padding-bottom:15px;
+     margin: 10px auto;
+    padding: 10px 0px;
+    background: #767575;
 }
 .impact-ribbon ul{
      list-style-type: none;
-     padding-left: 0;
      display: flex;
      margin-bottom: 0;
+    padding-left: 0;
 }
 
 .impact-ribbon ul li{
-     width: 19%;
+     width: 19.5%;
      display: inline-block;
      text-align: center;
-     padding: 0px 25px 0px 25px;
+     padding: 15px 20px 0px 20px;
      color: #ffffff;
      border-left: 1px dotted #969696;
      border-right: 1px dotted #565656;
@@ -283,6 +329,7 @@ p{
 
 .impact-ribbon ul li:first-of-type{
      border-left: none;
+	padding-right: 0px;
 }
 .impact-ribbon ul li:last-of-type{
      border-right: none;
@@ -293,14 +340,14 @@ p{
 .impact-ribbon ul li h1{
      margin-top:0px;
      margin-bottom: 0px;
-     font-size:48px;
+     font-size:40px;
 }
 .impact-ribbon ul li h1 span{
      font-size:24px;
 }
 .impact-ribbon ul li p{
      font-weight:300;
-     font-size:20px;
+     font-size:18px;
      margin-bottom: 15px;
 }
 .mission{
@@ -331,8 +378,7 @@ p{
 .mission .more .fa{
      margin-right:10px;
 }
-.main-container .programs {
-    background-color:#900;
+.main-container .programs, .approach h1 {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     color:#ffffff;
@@ -341,10 +387,11 @@ p{
     font-size: 40px;
     margin-top:10px;
     position: relative;
-    padding-top:15px;
-    padding-bottom:10px;
+    padding-top:10px;
 }
-
+.main-container .programs{
+    background-color:#900;
+}
 .ngo-links a img {
    text-transform: uppercase;
    position: relative; 
@@ -356,11 +403,8 @@ p{
 .spacer {
    padding-top:10px;
 }
-
+.main-container .programs, .approach{height: 67px;}
 .approach {
-     padding-top:15px;
-     padding-bottom:10px;
-     margin-top:10px;
      font-weight: 600;
      position: relative;
      background-color:#ee7e06;
@@ -368,18 +412,13 @@ p{
      text-transform: uppercase;
      color:#ffffff;
 }
+.approach h1 {margin-bottom: 0px; line-height: 55px;}
 
-.approach h1{
-     margin-top: 15px;
-     margin-bottom: 15px;
-     font-weight: 600;
-     position: relative;
-}
 .approach h1:after{
      content:"";
      position:absolute;
      left: 48.5%;
-     top:53px;
+     top:65px;
      height:17px;
      width:34px;
      background-image:url(images/triangle.png);
@@ -405,6 +444,7 @@ p{
      text-align:center;
      color:#ffffff;
      width: 19%;
+    margin: 0px auto;
      padding: 9px;
 }
 .approach-tabs ul li:nth-of-type(1) h3{
@@ -565,6 +605,17 @@ p{
 .testimonial{
      background-color: #071e42;
      font-family: 'Josefin Sans', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.testimonial .next-title{
+	padding-top: 50px;
+	overflow: hidden;
+    padding-left: 30px;
+}
+.testimonial .next-steps {
+    padding-left: 13px;
+    margin-top: 20px;
 }
 .testimonial .quotes,.testimonial .contact-form{
      padding-top:50px;
@@ -639,8 +690,8 @@ p{
      background-color:#ea4335;
      border:1px solid #ea4335;
      color:#ffffff;
-     padding:5px 15px 5px 41px;
-     font-size:24px;
+     padding: 10px 30px 5px 50px;
+    font-size: 18px;
      float: right;
      margin-top:5px;
 }
@@ -656,6 +707,7 @@ p{
      font-size: 21px;
      color:#ffffff;
 }
+.contact-form .wpcf7-select{ width: 100%;}
 .testimonial h1,.testimonial .contact-form h1{
      font-weight:700;
      color:#ffffff;
@@ -702,7 +754,7 @@ footer .footer .foot-3 h3:after{
 footer .footer .foot-4 h3:after{
      background-color:#ea4335;
 }
-footer .footer .foot-1,footer .footer .foot-2,footer .footer .foot-3{
+footer .footer .foot-1,footer .footer .foot-2{
      border-right:1px dotted #c2c2c2;
 }
 footer .footer .foot-2,footer .footer .foot-3,footer .footer .foot-4{
@@ -803,9 +855,12 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 .ngo-title{
      margin-bottom: 10px;
 }
+.ngo-page-banner .ngo-title{
+     margin-bottom: 0px;
+}
 .ngo-title h3{
      color: #ed3222;
-     font-size: 21px;
+     font-size: 20px;
      font-weight: bold;
      font-family: 'Open Sans', sans-serif;
 }
@@ -814,11 +869,15 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
      font-size:48px;
      text-decoration:none;
      color:#333333;
+}sas
+.ngo-title h1, .ngo-title h3 {
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 .ngo-title .social{
-     float: right;
-     margin-top: 36px;
-     padding: 19px 20px;
+    float: right;
+    margin-top: 25px;
+    padding: 15px 20px;
 }
 
 .ngo-title .social li{
@@ -842,9 +901,6 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 }
 .ngo-page-content .impact-ribbon p{
      font-size:18px;
-}
-.ngo-page-content .impact-ribbon ul li{
-     padding:0px 20px 0px 20px;
 }
 .ngo-page-content table th{
      border: 1px solid #cccccc!important;
@@ -1088,7 +1144,8 @@ footer ol .foot-1,footer ol .foot-2,footer ol .foot-3,footer ol .foot-4{
 .tabbed #overview a{
      color:#ea4335;
 }
-.page footer,.blog footer,.single footer,.archive footer{
+.page footer .main-container,.blog footer .main-container,.single footer .main-container,
+.archive footer .main-container{
      border-top:1px solid #eaeaea;
 }
 /* .home footer{
@@ -1310,8 +1367,15 @@ header,footer,.donation-col{
      width:100%;
      height: auto;
 }
-.about-us-banner{
-     margin-top: 5px;
+.nav-tabs>li>a {
+    color: black;
+    font-size: 16px;
+    border-right: 1px solid #e2e2e2;
+}
+.nav-tabs>li.active>a, .nav-tabs>li:hover>a {
+    background: #e2e2e2;
+    color: #000;
+    font-size: 16px;
 }
 .about-content h1.main-title{
      font-weight: 700;
@@ -1377,11 +1441,23 @@ header,footer,.donation-col{
      font-size:16px;
 }
 .about-content .team-member .member-info p{
-     margin-bottom:10px;
+    margin-bottom:10px;
+	font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
 }
 .about-content .col-lg-12 div:last-of-type{
      border-bottom:0px;
 }
+
+#wpsm_accordion_359 .wpsm_panel-body {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 18px !important;
+}
+div#my-tab-content, div#my-tab-content p, div#my-tab-content li {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
 /* -------------------------------------------------------- News Blog Page----------------------------------------------------------*/
 .news-container{
      padding: 50px 0px;
@@ -1633,6 +1709,24 @@ header,footer,.donation-col{
      max-height: 160px;
      min-height: 160px;
 }
+.tabbed .tab-pane h2 {
+    font-size: 28px;
+    margin-top: 40px;
+    font-weight: 400;
+    border-bottom: 1px solid #555;
+    display: inline-block;
+    padding-bottom: 6px;
+    font-family: 'Josefin-Sans', sans-serif;
+}
+.ngo-page-content .tab-pane p, .ngo-page-content .tab-pane li{ font-size: 16px;}
+.ngo-page-content .impact-ribbon ul li{width: auto; margin: 0px;}
+.ngo-page-content .tabbed {
+    padding-left: 15px;
+}
+.ngo-page-content .donate-col {
+    padding-right: 0px;
+    margin-top: -10px;
+}
 .block1 .existance,.block2 .staff{
      background-color:#ed3222;
      color:#ffffff;
@@ -1812,7 +1906,20 @@ div.wpcf7-mail-sent-ok{
      width:360px;
      margin:0 auto;
 }
+
+
 /* --------------------------------------------------------- Responsisve------------------------------------------------------------*/
+
+@media only screen and (max-width: 1100px){
+	html, body{ width: 100%;}
+	.top-head .logo-col, .top-head .right-head {
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	.top-head .logo-col{ margin-bottom: 5px;}
+
+}
+
 @media only screen and (max-width: 1300px){
      .row{
          padding-left:0!important;
@@ -1820,14 +1927,29 @@ div.wpcf7-mail-sent-ok{
          margin-right: 0!important;
          margin-left: 0!important;
     }
+	.ngo-page-content .impact-ribbon ul li h1 {
+	    font-size: 24px !important;
+	}
+	.impact-ribbon ul li:last-of-type{ padding-right: 0px;}
 }
+
 @media only screen and (min-width: 0px) and (max-width: 767px){
      footer ol .foot-1, footer ol .foot-2, footer ol .foot-3, footer ol .foot-4{
          width:49%;
          padding-left: 0;
          border:none;
     }
+	.ngo-title .social {
+	    float: none;
+	    margin-top: 0px;
+	    padding: 0px;
+	}
+	footer .text-left { text-align: center;	}
+	footer .text-left img { display: initial; }
+	.ngo-page-content .donate-col { padding-right: 15px; }
+
 }
+
 @media only screen and (min-width: 1150px) {
      .big-half-right .small-thumb:nth-of-type(3) img, .big-half-right .small-thumb:nth-of-type(4) img {
          height: 208px;
@@ -1838,29 +1960,40 @@ div.wpcf7-mail-sent-ok{
          height:204px;
     }
 }
+
+@media only screen and (max-width: 449px){
+	.metaslider .caption h2 {
+	    font-size: 10px !important;
+	    line-height: 11px !important;
+	}
+	.metaslider .caption h3 {
+   		font-size: 10px;
+	}
+	.metaslider .caption h3 span:first-child {
+	    margin-right: 10px;
+	}
+}
+
 @media only screen and (max-width: 391px){
-     .logo{
-         margin:0 auto;
-    }
-     .right-head{
-         text-align: center;
-    }
+     .logo{ margin:0 auto;}
      .slogan {
          padding-left: 15px;
-    }
+    }	
      .slogan p{
          text-align: center;
          font-size:16px;
     }
-     .donate-btn{
-         font-size:20px;
-    }
      .menubar{
          display:none;
     }
-     .social{
-         margin-top:3px;
-    }
+
+.impact-ribbon ul {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0px;
+}
+.programs-gallery .row div img{ max-width:100%; height: auto;    margin-bottom: 20px;}
+.contact-form .wpcf7-select{width:100%;}
      .explore-bar{
          background-image:none;
          height:auto;
@@ -1896,7 +2029,7 @@ div.wpcf7-mail-sent-ok{
          padding-bottom: 0;
     }
      .impact-ribbon ul li{
-         width: 80%;
+         width: 80% !important;
          margin: 0 auto;
          display: block;
          padding: 25px 0px 15px 0px;
@@ -1982,18 +2115,26 @@ div.wpcf7-mail-sent-ok{
          letter-spacing: -0.5px!important;
     }
 }
+
+@media only screen and (max-width: 650px){
+	.subblock1, .subblock2{ height: 170px;}
+	.testimonial .next-steps{ padding-bottom: 30px; }
+}
+
 @media only screen and (max-width: 550px){
+	.programs-gallery .row div{ width:100%; margin: 0px auto;margin-bottom: 15px; text-align: center;}
+	.nav-tabs>li {
+    	float: none;
+	}
      .impact-ribbon ul{
          width:90%;
-         margin-left:5%;
+	    margin: 0px auto;
          display: block;
          padding-top: 15px;
          padding-bottom: 15px;
     }
      .impact-ribbon ul li{
-         width: 48%!important;
-         display: inline-block!important;
-         padding: 0px 10px 5px 10px!important;
+         width: 100%;
          border:none!important;
     }
      .international ul{
@@ -2126,9 +2267,25 @@ div.wpcf7-mail-sent-ok{
      .ngo-page-content .impact-ribbon p{
          font-size:14px;
     }
+	.metaslider .caption-wrap{
+		top: 3% !important;
+	    left: 0% !important;
+		width: 70% !important;
+	}
+	.metaslider .caption h2 {
+	    font-size: 14px;
+	    margin-top: 0px;
+	    margin-bottom: 10px;
+	    line-height: 18px;
+	}
+	.metaslider .caption h3 {
+	    font-size: 12px;
+	}
+
 }
+
 @media only screen and (max-width: 850px){
-     .block1, .block2, .block3, .block4{
+     .block1, .block2, .block3, .block4, .tabbed .block1, .tabbed .block2, .tabbed .block3, .tabbed .block4{
          width:100%;
     }
      .ngo-summary img{
@@ -2137,7 +2294,7 @@ div.wpcf7-mail-sent-ok{
     }
      .block1 .existance, .block2 .staff{
          font-size:14px;
-         padding-left: 12px;
+         padding-left: 25px;
     }
      .subblock4 .office span{
          margin-left:8%;
@@ -2145,6 +2302,7 @@ div.wpcf7-mail-sent-ok{
      .subblock3, .subblock4{
          min-height:auto!important;
     }
+	
 }
 @media only screen and (min-width: 551px) and (max-width: 767px){
      .big-half-right .small-thumb{
@@ -2199,7 +2357,38 @@ div.wpcf7-mail-sent-ok{
      .carousel-control.right {
          right: 35%!important;
     }
+
+	.metaslider .caption-wrap{
+		top: 7% !important;
+	    left: 0% !important;
+		width: 65% !important;
+	}
+	.metaslider .caption h2 {
+	    font-size: 14px;
+	    margin-top: 0px;
+	    margin-bottom: 20px;
+	    line-height: 20px;
+	}
+	.metaslider .caption h3 {
+	    font-size: 14px;
+	}
 }
+
+ @media only screen and (max-width: 767px){
+	.slogan h4 {
+    	font-size: 13px;
+    	text-align: center;
+    	line-height: 24px;
+	}
+	.donate-btn {
+	    font-size: 16px;
+	    margin-right: 15px;
+	    padding: 8px 25px 5px 25px;
+	}
+	.social { margin: 0px 0px 0px 15px;}
+
+}
+
  @media only screen and (min-width: 391px) and (max-width: 767px){
      .logo{
          margin:0 auto;
@@ -2212,16 +2401,13 @@ div.wpcf7-mail-sent-ok{
          font-size:16px;
     }
      .donate-btn{
-         font-size:20px;
+        margin-right: 0px;
+    margin-top: 0;
     }
      .menubar{
          display:none;
     }
-     .social{
-         margin-top:3px;
-    }
      .big-half-left, .big-half-right, 
-    /* .big-half-right .small-thumb, */
      .big-half-left img, .big-half-right .small-thumb img{
          width:100%;
     }
@@ -2231,10 +2417,6 @@ div.wpcf7-mail-sent-ok{
      .big-half-left h2{
          font-size: 18px;
     }
-    /* .big-half-left .donate-btn{
- *          display: none;
- *              }
- *                   */
      .big-half-right .small-thumb:nth-of-type(1), .big-half-right .small-thumb:nth-of-type(2){
          margin-top:5px;
     }
@@ -2299,15 +2481,21 @@ div.wpcf7-mail-sent-ok{
      h1{
          font-size:30px;
     }
+	.ngo-title h1 a { font-size: 40px; }
      .approach h1:after{
          top:48px;
          left: 46.5%;
     }
      .approach-tabs ul li{
          display: inline-block;
-         width: 49%;
+         width: 100%;
          margin-bottom: 50px;
     }
+.approach-tabs ul li p {
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 0px;
+}
      .approach-tabs ul li:last-of-type{
          width:100%;
     }
@@ -2347,6 +2535,11 @@ div.wpcf7-mail-sent-ok{
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1000px){
+	.ngo-title h1 a{font-size: 36px;}
+	.programs-gallery .row div{padding-right: 5px;}
+	.ngo-page-content .tabbed {
+	    padding-left: 15px;
+	}
      .big-half-left, .big-half-left img, .big-half-right, .big-half-right .small-thumb img{
          width:100%;
     }
@@ -2360,29 +2553,27 @@ div.wpcf7-mail-sent-ok{
          padding-left:15px;
     }
      .slogan p{
-         font-size:21px;
+         font-size:15px;
          margin-top:0;
+	    text-align: center;
     }
+	.slogan h4 {
+	    font-size: 10px;
+		text-align: center;
+	}
      .social{
-         float:right;
-         margin: 0px 0px 15px auto;
+         margin: 13px 0px 15px auto;
     }
+	.ngo-title .social{padding: 15px 0px;}
      .donate-btn{
-         font-size:16px;
+         font-size:14px; padding: 10px 15px 7px 15px;
     }
      .right-head .about-text{
          font-size:11px;
          letter-spacing:0px;
     }
      .social li a{
-         font-size:13px;
-         padding: 4px 9px;
-    }
-     .social li.yt a{
-         padding: 4px 8px;
-    }
-     .social li.tweet a{
-         padding: 4px 7px;
+         font-size:14px;
     }
      .big-half-right .small-thumb{
          width: 49.6%;
@@ -2411,11 +2602,15 @@ div.wpcf7-mail-sent-ok{
      .impact-ribbon ul li{
          padding: 0px 21px 0px 21px;
     }
+	.ngo-page-content .impact-ribbon ul li { width: 25%;}
+	.ngo-page-content .impact-ribbon ul li h1{ font-size:24px !important;}
      .impact-ribbon ul li h1{
-         font-size:36px;
+        font-size:36px;
+	    margin-top: 10px;
     }
      .impact-ribbon ul li p{
-         font-size:11px;
+        font-size:11px;
+	    margin-bottom: 0px;
     }
      .news ul li h2{
          font-size: 30px;
@@ -2439,18 +2634,32 @@ div.wpcf7-mail-sent-ok{
      .donate-form-container .tab-content #donate-monthly .donate-cause .amount i{
          display:block;
     }
+	footer ol .foot-1, footer ol .foot-2, footer ol .foot-3, footer ol .foot-4{width: 32%;}
+
+	.metaslider .caption-wrap{
+		top: 10% !important;
+	    left: 2% !important;
+		width: 68% !important;
+	}
+	.metaslider .caption h2 {
+	    font-size: 20px;
+	    margin-top: 0px;
+	    margin-bottom: 20px;
+	}
+	.metaslider .caption h3 {
+	    font-size: 16px;
+	}
+
 }
+
 @media only screen and (min-width: 1001px) and (max-width: 1100px){
-     .slogan{
-         padding-left:15px;
-    }
-     .slogan p{
-         font-size:21px;
-         margin-top:0;
-    }
+	.metaslider .caption-wrap { top: 10% !important; }
+    .slogan{ padding-left:15px;}
+    .slogan p{ font-size:18px; margin-top:0;}
+	.slogan h4 { font-size: 14px;}
      .social{
          float:left;
-         margin: 0px 0px 15px auto;
+         margin: 17px 0px 15px auto;
     }
      .donate-btn{
          font-size:21px;
@@ -2460,39 +2669,15 @@ div.wpcf7-mail-sent-ok{
          letter-spacing:0px;
     }
      .social li a{
-         font-size:13px;
-         padding: 4px 9px;
+         font-size:16px;
     }
      .social li.web a {
-         padding: 4px 8px;
          font-size: 13px;
-    }
-     .social li.yt a{
-         padding: 4px 8px;
-    }
-     .social li.tweet a{
-         padding: 4px 7px;
     }
      .big-half-left h2{
          font-size:26px;
     }
-    /* .explore-bar{
- *          height:41px;
- *                   padding-top: 10px;
- *                            margin-top: 5px;
- *                                     background-size: 138px 41px;
- *                                         }
- *                                              .explore-bar ul li span{
- *                                                       font-size:12px;
- *                                                           }
- *                                                                .explore-bar ul li:nth-of-type(1){
- *                                                                         padding-right: 41px;
- *                                                                             }
- *                                                                                  .explore-bar ul{
- *                                                                                           padding-left:21px;
- *                                                                                               }
- *                                                                                                    */
-     .explore-bar ul li{
+    .explore-bar ul li{
          padding: 0px 35px 0px 35px;
     }
      .explore-bar ul li a{
@@ -2520,13 +2705,10 @@ div.wpcf7-mail-sent-ok{
          padding: 10px 21px 10px 20px;
     }
      .ngo-page-content .impact-ribbon ul li {
-         padding: 0px 10px 0px 10px;
+         padding: 10px 10px 0px 10px;
     }
      .ngo-page-content .impact-ribbon ul li h1 {
          font-size: 26px;
-    }
-     .ngo-page-content .impact-ribbon ul li:last-of-type h1{
-         padding: 10px 8px;
     }
      .donate-form-container .tab-content .donate-cause .cause{
          padding: 14px 7px;
@@ -2561,14 +2743,7 @@ div.wpcf7-mail-sent-ok{
          font-size:45px;
     }
      .social li a{
-         font-size:13px;
-         padding: 4px 9px;
-    }
-     .social li.yt a{
-         padding: 4px 8px;
-    }
-     .social li.tweet a{
-         padding: 4px 7px;
+         font-size:16px;
     }
      .donate-form-container .nav-tabs>li>a{
          padding: 10px 29px 10px 29px;
@@ -2614,6 +2789,7 @@ div.wpcf7-mail-sent-ok{
          width: 450px!important;
          margin-top: 5%;
     }
+	.ngo-page-banner{ padding-bottom:10px;}
 }
 @media only screen and (min-width: 771px) and (max-width: 1200px){
      .carousel.slide{
@@ -2630,9 +2806,22 @@ div.wpcf7-mail-sent-ok{
      .carousel-control.right{
          right:-12px!important;
     }
+	.slogan h4 {font-size: 14px !important;}
+
 }
+
+@media only screen and (min-width: 610px) and (max-width: 850px) {
+	.page-id-144 #overview .block1, .page-id-144 #overview .block2 {
+	    width: 50%;
+	}
+}
+
 @media only screen and (min-width: 850px) and (max-width: 1000px) {
      .block1, .block2, .block3, .block4 {
          width: 35.6%;
     }
+	.ngo-page-content .impact-ribbon ul li { width: 25%;}
+	.ngo-page-content .impact-ribbon ul li h1{ font-size:24px !important;}
+
 }
+
