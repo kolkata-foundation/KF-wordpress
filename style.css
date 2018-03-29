@@ -2602,7 +2602,7 @@ div.wpcf7-mail-sent-ok{
      .impact-ribbon ul li{
          padding: 0px 21px 0px 21px;
     }
-	.ngo-page-content .impact-ribbon ul li { width: 25%;}
+	.ngo-page-content .impact-ribbon ul li { width: 24%;}
 	.ngo-page-content .impact-ribbon ul li h1{ font-size:24px !important;}
      .impact-ribbon ul li h1{
         font-size:36px;
@@ -2790,6 +2790,10 @@ div.wpcf7-mail-sent-ok{
          margin-top: 5%;
     }
 	.ngo-page-banner{ padding-bottom:10px;}
+	.page-id-144 .ngo-page-content .impact-ribbon ul li h1 {
+		font-size: 20px !important;
+	}
+
 }
 @media only screen and (min-width: 771px) and (max-width: 1200px){
      .carousel.slide{
@@ -2820,7 +2824,7 @@ div.wpcf7-mail-sent-ok{
      .block1, .block2, .block3, .block4 {
          width: 35.6%;
     }
-	.ngo-page-content .impact-ribbon ul li { width: 25%;}
+	.ngo-page-content .impact-ribbon ul li { width: 24%;}
 	.ngo-page-content .impact-ribbon ul li h1{ font-size:24px !important;}
 
 }
