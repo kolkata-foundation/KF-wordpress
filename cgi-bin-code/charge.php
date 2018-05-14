@@ -13,12 +13,18 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
 
   $token      = $data['stripe-token-id'];
   $email      = $data['donor-email'];
-  $donor_name = $data['donor-name'];
+  $donor_name = $data['donor-name'] ?: 'Anonymous';
   $donor_zip  = $data['donor-zipcode'];
 
+  $fundraiser_id   = $data['fundraiser-id'];
   $charged_amount  = $data['charged-amount'];
   $donation_amount = $data['donation-amount'];
-  $recurring  = $data['recurring'];
+  $recurring       = $data['recurring'];
+
+  // Return unless valid email or amount 
+  if (empty($token) or empty($email) or empty($donation_amount)) {
+    return;
+  }
 
   $customer = \Stripe\Customer::create(array(
       'email' => $email,
@@ -54,6 +60,26 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
       ));
   }
 
+  if ($fundraiser_id > 0) {
+      // wpdb not available outside wordpress.
+      require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+      $wpdb = new wpdb( DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
+
+      // Add entries for tracking volunteer campaign donations
+      $wpdb->insert(
+           'wp_campaign_donations',
+           array (
+                  'fundraiser_id'   => $fundraiser_id,
+                  'donor_name'      => $donor_name,
+                  'donor_email'     => $email,
+                  'donation_amount' => $donation_amount,
+                  'is_recurring'    => $recurring,
+                  'donation_date'   => date('m/d/Y', time()),
+                )
+      );
+  }
+
+  // Send a thank-you email
   $subject = "Thank you from Kolkata Foundation";
 
   $header  = 'From: donations@kolkatafoundation.org'     . "\r\n";
@@ -68,7 +94,7 @@ As a registered 501 c(3) organization, your donation is tax deductible. This ema
 for your donation.
 
 Please check if your employer will match your donation. We are already enrolled with Benevity and 
-YourCause in order to help this process.
+YourCause in order to help this process (and happy to join other platforms).
 
 You can follow us at www.facebook.com/kolkatafoundation to learn about our projects and 
 the impact of your donations. 100% of our administrative costs are borne by our founders, so 
