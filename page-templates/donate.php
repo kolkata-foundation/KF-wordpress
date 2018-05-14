@@ -25,6 +25,10 @@ include 'credentials.php';
 $stripe = $prod_stripe;
 
 \Stripe\Stripe::setApiKey($stripe['secret_key']);
+
+global $wp_query;
+$fundraiser_id = $wp_query->query_vars['fundraiser_id'] ?: 0;
+
 ?>
 
     <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -40,8 +44,9 @@ $stripe = $prod_stripe;
                 <form method="post" action="http://www.kolkatafoundation.org/cgi-bin/charge.php" class="main-donation-form">
                 <section class="amt-btns">
                     <input type="hidden" name="currency_code" value="USD">
-                    <input type="hidden" id="charged-amount"  name="charged-amount" value=0>
+                    <input type="hidden" id="charged-amount"  name="charged-amount"  value=0>
                     <input type="hidden" id="donation-amount" name="donation-amount" value=0>
+                    <input type="hidden" id="fundraiser-id"   name="fundraiser-id"   value=<?php echo $fundraiser_id ?> >
 
                     <label class="box">
                         <input type="radio" name="amount" value="10">
@@ -133,6 +138,7 @@ $stripe = $prod_stripe;
                 var donorName     = document.getElementById('donor-name').value; 
                 var recurring     = document.getElementById('is_monthly').checked ? 1 : 0;
                 var donationAmount = document.getElementById('donation-amount').value;
+                var fundraiser_id  = document.getElementById('fundraiser-id').value;
                 var tokenId       = token.id;
                 var email         = token.email;
                 var zipcode       = token.card.address_zip;
@@ -143,7 +149,8 @@ $stripe = $prod_stripe;
                     body: JSON.stringify({'stripe-token-id': tokenId, 'donor-email': email, 
                                           'charged-amount': chargedAmount, 'donor-name': donorName,
                                           'donation-amount': donationAmount,
-                                          'donor-zipcode': zipcode, 'recurring': recurring})
+                                          'donor-zipcode': zipcode, 'recurring': recurring,
+                                          'fundraiser-id': fundraiser_id })
                 })
                 .then(response => {
                     if (!response.ok) {

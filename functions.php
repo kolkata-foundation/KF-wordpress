@@ -182,6 +182,16 @@ function kolkatagives_mce_css( $mce_css ) {
 add_filter( 'mce_css', 'kolkatagives_mce_css' );
 
 /**
+ * Used in campaigns
+ */
+function add_query_vars_filter( $vars ){
+  $vars[] = "volunteer";
+  $vars[] = "fundraiser_id";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+/**
  * Filter the page title.
  *
  * Creates a nicely formatted and more specific title element text
