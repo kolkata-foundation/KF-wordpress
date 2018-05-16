@@ -128,6 +128,14 @@ p{
      font-family: 'Josefin Sans', sans-serif;
 }
 
+.campaign-status {
+     background-color: powderblue;
+     color: #009 !important;
+     padding: 8px 15px;
+     font-size: 18px;
+     font-family: 'Josefin Sans', sans-serif;
+}
+
 .right-head .about-text{
      font-size:13px;
      margin-top: 12px;
