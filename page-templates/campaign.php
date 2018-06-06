@@ -37,20 +37,32 @@ get_header(); ?>
     $donations   = $wpdb->get_results("SELECT donor_name, donation_amount, is_recurring, donation_date " . 
                                       " FROM $table_name WHERE fundraiser_id=" . $fundraiser_id . 
                                       " ORDER BY donation_date DESC");
-    $highest_donations = $wpdb->get_results("SELECT donor_name, donation_amount, is_recurring, donation_date " . 
-                                      " FROM $table_name WHERE fundraiser_id=" . $fundraiser_id . 
-                                      " ORDER BY donation_amount DESC");
     $donation_count = $wpdb->num_rows;
 
     $donation_total = 0; 
     foreach ($donations as $key => $row) { 
-      $donation_total += $row->donation_amount;
+      $multiplier = ($row->is_recurring ? 12 : 1);
+      $donation_total += $row->donation_amount * $multiplier;
     }
+
+    // Sorting by the largest one first
+    $highest_donations = $donations;
+    foreach ($highest_donations as $key => $row) { 
+      $multiplier = ($row->is_recurring ? 12 : 1);
+      $row->annual_donation = $row->donation_amount * $multiplier;
+    }
+
+    function compare_donations($a, $b)
+    {
+        return $b->annual_donation - $a->annual_donation;
+    } 
+
+    usort($highest_donations, "compare_donations");
 ?>
 
     <div class="main-container">
         <div class="row ngo-page-banner">
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center ngo-title">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center ngo-title">
                 <h1><?php echo $result[0]->volunteer_names; ?></h1>
                 <h3>Goal: <?php echo $result[0]->campaign_pledge; ?></h3>
             </div>

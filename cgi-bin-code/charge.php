@@ -100,13 +100,13 @@ You can follow us at www.facebook.com/kolkatafoundation to learn about our proje
 the impact of your donations. 100% of our administrative costs are borne by our founders, so 
 that your donation can go towards helping those with the greatest need.
 
-Please contact us at info@kolkatafoundation.org if you are interested in getting involved. 
 We appreciate you spreading the word amongst your friends -- come join us to build a global
 community working together to fight poverty in Kolkata.
 
 With gratitude,
 The Kolkata Foundation team
 
+PS: Contact us at info@kolkatafoundation.org to start your own fundraiser.
 MARKER;
 
     $mail_sent = mail("$email", "$subject", "$message", "$header");
