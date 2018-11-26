@@ -77,13 +77,17 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
                   'donation_date'   => date('m/d/Y', time()),
                 )
       );
+
+      $results = $wpdb->get_results("SELECT * FROM wp_fundraisers WHERE fundraiser_id = " . $fundraiser_id);
+      $volunteer_email = $results[0]->email;
   }
 
   // Send a thank-you email
-  $subject = "Thank you from Kolkata Foundation";
+  $subject = 'Thank you from Kolkata Foundation';
 
-  $header  = 'From: donations@kolkatafoundation.org'     . "\r\n";
-  $header .= 'Reply-to: donations@kolkatafoundation.org' . "\r\n";
+  $headers  = 'From: donations@kolkatafoundation.org' . "\r\n" .
+              'Cc: ' . $volunteer_email . "\r\n" . 
+              'Reply-to: donations@kolkatafoundation.org';
 
   $message = <<<MARKER
 
@@ -109,6 +113,6 @@ The Kolkata Foundation team
 PS: Contact us at info@kolkatafoundation.org to start your own fundraiser.
 MARKER;
 
-    $mail_sent = mail("$email", "$subject", "$message", "$header");
+    $mail_sent = mail($email, $subject, $message, $headers);
     return $mail_sent;
 ?>

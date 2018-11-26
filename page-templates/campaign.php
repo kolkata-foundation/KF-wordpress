@@ -79,7 +79,7 @@ get_header(); ?>
 
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center donate-col">
              <div>
-             <a href="http://kolkatafoundation.org/donation-form/?fundraiser_id=<?php echo $result[0]->fundraiser_id ?>" class="donate-btn">
+             <a href="https://kolkatafoundation.org/donation-form/?fundraiser_id=<?php echo $result[0]->fundraiser_id ?>" class="donate-btn">
                  DONATE HERE
              </a>
              </div>

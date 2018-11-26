@@ -156,7 +156,7 @@ $fundraiser_id = $wp_query->query_vars['fundraiser_id'] ?: 0;
                     if (!response.ok) {
                        throw response;
                     }
-                    alert('Thank you for your donation. Check your email for a receipt.');
+                    alert('Thank you for your donation. Check your email (including the spam folder) for your tax-deducation receipt.');
                     window.location.replace("http://www.kolkatafoundation.org/");
                     return response.json();
                 })
