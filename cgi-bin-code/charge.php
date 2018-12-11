@@ -47,8 +47,16 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
          "20" => "Monthly-20",
          "25" => "Monthly-25",
          "50" => "Monthly-50",
+         "75" => "Monthly-75",
          "100" => "Monthly-100",
+         "150" => "Monthly-150",
+         "200" => "Monthly-200",
          "250" => "Monthly-250",
+         "300" => "Monthly-300",
+         "400" => "Monthly-400",
+         "500" => "Monthly-500",
+         "750" => "Monthly-750",
+         "1000" => "Monthly-1000",
       );
       $plan = $lookup_plan[$donation_amount];
 
@@ -84,9 +92,13 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
 
   // Send a thank-you email
   $subject = 'Thank you from Kolkata Foundation';
+  if (!is_null($volunteer_email)) {
+     $cc_string = 'Cc: ' . $volunteer_email . "\r\n" ;
+  } else {
+     $cc_string = "";
+  }
 
-  $headers  = 'From: donations@kolkatafoundation.org' . "\r\n" .
-              'Cc: ' . $volunteer_email . "\r\n" . 
+  $headers  = 'From: donations@kolkatafoundation.org' . "\r\n" . $cc_string . 
               'Reply-to: donations@kolkatafoundation.org';
 
   $message = <<<MARKER

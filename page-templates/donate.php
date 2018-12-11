@@ -27,11 +27,15 @@ $stripe = $prod_stripe;
 \Stripe\Stripe::setApiKey($stripe['secret_key']);
 
 global $wp_query;
-$fundraiser_id = $wp_query->query_vars['fundraiser_id'] ?: 0;
+$fundraiser_id = $wp_query->query_vars['fundraiser_id'] ?: 0; // Find in the URL
+
+if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
+  $fundraiser_id = $_COOKIE['kf_fundraiser_id'];
+}
 
 ?>
-
     <script src="https://checkout.stripe.com/checkout.js"></script>
+
     <div class="main-container donation-form" xmlns="http://www.w3.org/1999/html">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donation-col text-center">

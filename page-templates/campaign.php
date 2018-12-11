@@ -11,15 +11,13 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-
-get_header(); ?>
+ get_header(); 
+?>
 
 <?php 
     global $wp_query;
     $campaign = $wp_query->query_vars['volunteer'];
-?>
 
-<?php
     global $wpdb;
     $segments = explode("_", $campaign);
     $volunteer = $segments[0];
@@ -30,9 +28,9 @@ get_header(); ?>
 
     if ($result == null) { # XXX - redirect to the donation page?
     }
-
     $fundraiser_id = $result[0]->fundraiser_id;
-    $goal          = $result[0]->target;
+
+    $goal        = $result[0]->target;
     $table_name  = $wpdb->prefix . 'campaign_donations';
     $donations   = $wpdb->get_results("SELECT donor_name, donation_amount, is_recurring, donation_date " . 
                                       " FROM $table_name WHERE fundraiser_id=" . $fundraiser_id . 
@@ -59,6 +57,11 @@ get_header(); ?>
 
     usort($highest_donations, "compare_donations");
 ?>
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/js.cookie.js'></script>
+    <script>
+        Cookies.remove('kf_fundraiser_id'); // Delete any previously set cookie
+        Cookies.set('kf_fundraiser_id', <?php echo (string)$fundraiser_id ?>, {expires: 7});
+    </script>
 
     <div class="main-container">
         <div class="row ngo-page-banner">
