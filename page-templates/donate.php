@@ -121,7 +121,7 @@ $fundraiser_id = $wp_query->query_vars['fundraiser_id'] ?: 0;
                     <div class="clear"></div>
 
                     <label for="donation-type" class="repeat-btn">
-                        <input type="checkbox" name="is_monthly" id='is_monthly' class="enable-checkbox" checked>Make this donation monthly
+                        <input type="checkbox" name="is_monthly" id='is_monthly' class="enable-checkbox">Make this donation monthly
                     </label>
 
                     <div class="clear"></div>
