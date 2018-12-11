@@ -59,8 +59,10 @@
 ?>
     <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/js.cookie.js'></script>
     <script>
-        Cookies.remove('kf_fundraiser_id'); // Delete any previously set cookie
-        Cookies.set('kf_fundraiser_id', <?php echo (string)$fundraiser_id ?>, {expires: 7});
+        if (Cookies.get('kf_fundraiser_id') === undefined) {
+            // Only set once if it has not been set before
+            Cookies.set('kf_fundraiser_id', <?php echo (string)$fundraiser_id ?>, {expires: 1});
+        }
     </script>
 
     <div class="main-container">
