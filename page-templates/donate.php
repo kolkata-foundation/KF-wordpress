@@ -53,72 +53,72 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                     <input type="hidden" id="fundraiser-id"   name="fundraiser-id"   value=<?php echo $fundraiser_id ?> >
 
                     <label class="box">
-                        <input type="radio" name="amount" value="10">
+                        <input type="radio" name="amount" class="amt_button" value="10">
                         <span>$10</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="20">
+                        <input type="radio" name="amount" class="amt_button" value="20">
                         <span>$20</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="25" checked>
+                        <input type="radio" name="amount" class="amt_button" value="25" checked>
                         <span>$25</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="50">
+                        <input type="radio" name="amount" class="amt_button" value="50">
                         <span>$50</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="75">
+                        <input type="radio" name="amount" class="amt_button" value="75">
                         <span>$75</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="100">
+                        <input type="radio" name="amount" class="amt_button" value="100">
                         <span>$100</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="150">
+                        <input type="radio" name="amount" class="amt_button" value="150">
                         <span>$150</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="200">
+                        <input type="radio" name="amount" class="amt_button" value="200">
                         <span>$200</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="250">
+                        <input type="radio" name="amount" class="amt_button" value="250">
                         <span>$250</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="300">
+                        <input type="radio" name="amount" class="amt_button" value="300">
                         <span>$300</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="400">
+                        <input type="radio" name="amount" class="amt_button" value="400">
                         <span>$400</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="500">
+                        <input type="radio" name="amount" class="amt_button" value="500">
                         <span>$500</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="750">
+                        <input type="radio" name="amount" class="amt_button" value="750">
                         <span>$750</span>
                     </label>
 
                     <label class="box">
-                        <input type="radio" name="amount" value="1000">
+                        <input type="radio" name="amount" class="amt_button" value="1000">
                         <span>$1000</span>
                     </label>
 
@@ -180,7 +180,9 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                           });
 
             document.getElementById('donation').addEventListener('click', function(e) {
-                var radios = document.getElementsByName('amount');
+                // seems to change when recurring button pressed
+                // var radios = document.getElementsByName('amount'); 
+                var radios = document.getElementsByClassName('amt_button');
                 var donationAmount = 25;
                 for (var i=0,length=radios.length; i < length; i++) {
                     if (radios[i].checked) {
