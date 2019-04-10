@@ -98,8 +98,8 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
      $cc_string = "";
   }
 
-  $headers  = 'From: donations@kolkatafoundation.org' . "\r\n" . $cc_string . 
-              'Reply-to: donations@kolkatafoundation.org';
+  $headers  = 'From: info@kolkatafoundation.org' . "\r\n" . $cc_string . 
+              'Reply-to: info@kolkatafoundation.org';
 
   $message = <<<MARKER
 
@@ -117,7 +117,7 @@ the impact of your donations. 100% of our administrative costs are borne by our 
 that your donation can go towards helping those with the greatest need.
 
 We appreciate you spreading the word amongst your friends -- come join us to build a global
-community working together to fight poverty in Kolkata.
+community working together to help the underprivileged in Kolkata.
 
 With gratitude,
 The Kolkata Foundation team
