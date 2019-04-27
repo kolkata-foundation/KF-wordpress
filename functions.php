@@ -185,7 +185,7 @@ add_filter( 'mce_css', 'kolkatagives_mce_css' );
  * Used in campaigns
  */
 function add_query_vars_filter( $vars ){
-  $vars[] = "volunteer";
+  $vars[] = "campaign";
   $vars[] = "fundraiser_id";
   return $vars;
 }

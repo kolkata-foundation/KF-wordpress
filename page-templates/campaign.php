@@ -16,7 +16,7 @@
 
 <?php 
     global $wp_query;
-    $campaign = $wp_query->query_vars['volunteer'];
+    $campaign = $wp_query->query_vars['campaign'];
 
     global $wpdb;
     $segments = explode("_", $campaign);
