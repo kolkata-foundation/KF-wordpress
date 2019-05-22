@@ -93,11 +93,11 @@
                Raised by <?php echo $donation_count ?> donors
              </div>
              <ul class="nav nav-tabs nav-justified">
-                <li class="active"><a data-toggle="tab" href="#recent">Recent</a>
-                <li><a data-toggle="tab" href="#highest">Highest</a></li>
+                <li class="active"><a data-toggle="tab" href="#highest">Highest</a></li>
+                <li><a data-toggle="tab" href="#recent">Recent</a>
              </ul>
              <div class="tab-content">
-                 <div id="recent" class="tab-pane fade in active">
+                 <div id="recent" class="tab-pane fade">
                  <table class="table table-condensed">
                  <tbody>
                  <?php foreach ($donations as $key => $row) { ?>
@@ -113,7 +113,7 @@
                   <?php } ?>
                  </tbody></table>
                  </div><!-- tab-pane -->
-                 <div id="highest" class="tab-pane fade">
+                 <div id="highest" class="tab-pane fade in active">
                  <table class="table table-condensed">
                  <tbody>
                   <?php foreach ($highest_donations as $key => $row) { ?>
