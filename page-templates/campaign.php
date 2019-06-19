@@ -101,7 +101,7 @@
                  <table class="table table-condensed">
                  <tbody>
                  <?php foreach ($donations as $key => $row) { ?>
-                   <tr><td>$
+                   <tr><td width="25%">$
                       <?php 
                         echo $row->donation_amount;
                         if ($row->is_recurring == true) { 
@@ -117,7 +117,7 @@
                  <table class="table table-condensed">
                  <tbody>
                   <?php foreach ($highest_donations as $key => $row) { ?>
-                    <tr><td>$
+                    <tr><td width="25%">$
                       <?php 
                         echo $row->donation_amount;
                         if ($row->is_recurring == true) { 
