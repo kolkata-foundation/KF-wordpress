@@ -6,7 +6,7 @@ html, body{
      -moz-osx-font-smoothing:grayscale;
      margin:0px auto;
      padding:0px;
-     width:1200px;
+     width:1140px;
      height:auto;
      font-family: 'Roboto', sans-serif;
      font-weight:400;
@@ -41,7 +41,7 @@ p{
 .clear{
      clear:both;
 }
-.main-container{
+.main-container {
      max-width:1140px;
      margin:0 auto;
 }
@@ -119,6 +119,18 @@ p{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.blog-link-titles {
+    background-color: #FF1654;
+    color: #ffffff!important;
+    padding: 10px 25px 7px 25px;
+    margin-top: 9px;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration:none!important;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .indian-donors {
      background-color: #006;
      color: #ffffff!important;
@@ -165,7 +177,7 @@ p{
      list-style-type:none;
      margin-bottom: 0px;
      padding-left: 0px;
-     width: 600px;
+     width: 800px;
      margin: 0 auto;
      display: flex;
 }
@@ -232,6 +244,19 @@ p{
     background-color:powderblue;
     margin-left: 0px;
     width: 100%;
+}
+
+.blog-page-banner {
+    background-color:#4F5D75;
+    margin-left: 0px;
+    width: 1140px;
+}
+
+.blog-page-banner h1 {
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   font-style:thin; 
+   font-size: 60px; 
 }
 
 .big-third {
@@ -699,7 +724,7 @@ p{
      border:1px solid #ea4335;
      color:#ffffff;
      padding: 10px 30px 5px 50px;
-    font-size: 18px;
+     font-size: 18px;
      float: right;
      margin-top:5px;
 }
@@ -2837,3 +2862,7 @@ div.wpcf7-mail-sent-ok{
 
 }
 
+.templateContainer {
+  max-width:600px !important;
+  border:15px solid #999999;
+}

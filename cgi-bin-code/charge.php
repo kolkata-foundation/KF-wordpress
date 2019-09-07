@@ -88,15 +88,19 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
 
       $results = $wpdb->get_results("SELECT * FROM wp_fundraisers WHERE fundraiser_id = " . $fundraiser_id);
       $volunteer_email = $results[0]->email;
+      $volunteer_name  = $results[0]->volunteer_names;
   }
 
   // Send a thank-you email
   $subject = 'Thank you from Kolkata Foundation';
+  $cc_string = "Cc: nitinkotakkf@gmail.com";
+  $volunteer_string = "";
+
   if (!is_null($volunteer_email)) {
-     $cc_string = 'Cc: ' . $volunteer_email . "\r\n" ;
-  } else {
-     $cc_string = "";
-  }
+     $cc_string = $cc_string . "," . $volunteer_email;  
+     $volunteer_string = ", as part of the fundraiser organized by " . $volunteer_name; 
+  } 
+  $cc_string .= "\r\n";
 
   $headers  = 'From: info@kolkatafoundation.org' . "\r\n" . $cc_string . 
               'Reply-to: info@kolkatafoundation.org';
@@ -105,9 +109,9 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
 
 Dear $donor_name,
 
-Thank you for your generous $recurring_frequency donation of $$donation_amount to Kolkata Foundation. 
-As a registered 501 c(3) organization, your donation is tax deductible. This email serves as a receipt
-for your donation.
+Thank you for your generous $recurring_frequency donation of $$donation_amount to Kolkata Foundation$volunteer_string. 
+As a registered 501 c(3) organization (Tax Id # 81-4479308), your donation is tax deductible. This email 
+serves as a receipt for your donation. Your entire donation will go towards supporting our causes in Kolkata.
 
 Please check if your employer will match your donation. We are already enrolled with Benevity and 
 YourCause in order to help this process (and happy to join other platforms).

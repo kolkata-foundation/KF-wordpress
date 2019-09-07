@@ -132,10 +132,12 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                 </section>
 
                 <section class="user-info">
-                        <p><input type="text" id="donor-name" placeholder="Donor Name" required></p>
-                        <p><input type="submit" name="submit" id="donation" value="DONATE NOW"></p>
+                  <input type="text" id="donor-name" placeholder="Donor Name" required  pattern="^\S+$">
+                  <input type="submit" name="submit" id="donation" value="DONATE NOW">
                 </section>
+			
             </div> 
+				
             <script><!-- STRIPE MAGIC -->
             function handleStripeToken(token) {
                 var chargedAmount = document.getElementById('charged-amount').value; 
@@ -146,6 +148,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                 var tokenId       = token.id;
                 var email         = token.email;
                 var zipcode       = token.card.address_zip;
+
 
                 fetch("/cgi-bin/charge.php", {
                     method: "POST",
@@ -169,6 +172,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                 .catch(err => {
                 })
             }
+            
 
             var handler = StripeCheckout.configure({
                               key: <?php echo "'" . $stripe['publishable_key'] . "'" ?>,
@@ -178,10 +182,24 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                               description: 'Fight poverty in Kolkata',
                               token: handleStripeToken
                           });
+            
+
+
+
+
+
+
+
 
             document.getElementById('donation').addEventListener('click', function(e) {
                 // seems to change when recurring button pressed
                 // var radios = document.getElementsByName('amount'); 
+
+                if (document.getElementById('donor-name').value.trim() == '') {
+                  jQuery('<p class="error">Enter donor name').insertAfter($('#donor-name'));
+                  return false;
+                }
+
                 var radios = document.getElementsByClassName('amt_button');
                 var donationAmount = 25;
                 for (var i=0,length=radios.length; i < length; i++) {
@@ -190,6 +208,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                         break;
                     }
                 }
+            
 
                 // Stripe charges 2.2% + $0.30
                 // S = (D+S)*0.022 + 30 => D+S = (D + 30)/0.978
@@ -200,13 +219,17 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                     name: 'Kolkata Foundation',
                     amount: totalAmount
                 });
+                
                 e.preventDefault();
             });
+
+        
 
             // Close Checkout on page navigation:
             window.addEventListener('popstate', function() {
                 handler.close();
             });
+
             </script>
 
             </form>
