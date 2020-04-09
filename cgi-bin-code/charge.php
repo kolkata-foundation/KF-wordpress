@@ -68,13 +68,15 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
       ));
   }
 
-  if ($fundraiser_id > 0) {
-      // wpdb not available outside wordpress.
-      require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
-      $wpdb = new wpdb( DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
+  if (!($fundraiser_id > 1)) {
+    $fundraiser_id = 1; # Not part of a campaign -- attribute to a general donation
+  }
+  // wpdb not available outside wordpress.
+  require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+  $wpdb = new wpdb( DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
 
-      // Add entries for tracking volunteer campaign donations
-      $wpdb->insert(
+  // Add entries for tracking volunteer campaign donations
+  $wpdb->insert(
            'wp_campaign_donations',
            array (
                   'fundraiser_id'   => $fundraiser_id,
@@ -84,12 +86,11 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
                   'is_recurring'    => $recurring,
                   'donation_date'   => date('m/d/Y', time()),
                 )
-      );
+  );
 
-      $results = $wpdb->get_results("SELECT * FROM wp_fundraisers WHERE fundraiser_id = " . $fundraiser_id);
-      $volunteer_email = $results[0]->email;
-      $volunteer_name  = $results[0]->volunteer_names;
-  }
+  $results = $wpdb->get_results("SELECT * FROM wp_fundraisers WHERE fundraiser_id = " . $fundraiser_id);
+  $volunteer_email = $results[0]->email;
+  $volunteer_name  = $results[0]->volunteer_names;
 
   // Send a thank-you email
   $subject = 'Thank you from Kolkata Foundation';
