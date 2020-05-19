@@ -15,7 +15,7 @@
 get_header(); ?>
 
     <div class="main-container ngo-banner">
-    <!--  <img src="http://kolkatafoundation.org/wp-content/uploads/2018/01/kf-banner1.jpg"> -->
+    <!--  <img src="https://kolkatafoundation.org/wp-content/uploads/2018/01/kf-banner1.jpg"> -->
 		<?php echo do_shortcode('[metaslider id="778"]'); ?>
     </div>
 

@@ -85,7 +85,6 @@ get_header(); ?>
                  <?php /* Start the Loop */ ?>
                  <?php while ( have_posts() ) : the_post(); ?>
                  <article>
-                         <!-- <img src="http://www.graycellsweb.in/demo/kolkatagives/wp-content/uploads/2016/06/news-1.jpg" alt="image"> -->
                      <?php the_post_thumbnail(); ?>
                          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <p><i><?php kolkatagives_entry_meta();?></span></i></p>

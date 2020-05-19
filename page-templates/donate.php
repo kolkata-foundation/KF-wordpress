@@ -36,7 +36,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
 ?>
     <script src="https://checkout.stripe.com/checkout.js"></script>
 
-    <div class="main-container donation-form" xmlns="http://www.w3.org/1999/html">
+    <div class="main-container donation-form" xmlns="https://www.w3.org/1999/html">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donation-col text-center">
                 <section class="text-center donate-info">
@@ -45,7 +45,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                     <?php endwhile; // end of the loop. ?>
                 </section>
 
-                <form method="post" action="http://www.kolkatafoundation.org/cgi-bin/charge.php" class="main-donation-form">
+                <form method="post" action="https://www.kolkatafoundation.org/cgi-bin/charge.php" class="main-donation-form">
                 <section class="amt-btns">
                     <input type="hidden" name="currency_code" value="USD">
                     <input type="hidden" id="charged-amount"  name="charged-amount"  value=0>
@@ -164,7 +164,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                        throw response;
                     }
                     alert('Thank you for your donation. Check your email (including the spam folder) for your tax-deducation receipt.');
-                    window.location.replace("http://www.kolkatafoundation.org/");
+                    window.location.replace("https://www.kolkatafoundation.org/");
                     return response.json();
                 })
                 .then(output => {

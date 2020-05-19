@@ -22,7 +22,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -58,7 +58,7 @@
                 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right-head">
                     <ul class="social">
-                        <li class="fb"><a href="http://www.facebook.com/kolkatafoundation" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li class="fb"><a href="https://www.facebook.com/kolkatafoundation" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li class="yt"><a href="https://youtu.be/bD6n7KdyPic" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                     <a href="https://kolkatafoundation.org/donation-form/" class="donate-btn">DONATE</a>
