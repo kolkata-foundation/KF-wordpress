@@ -92,8 +92,8 @@ get_header(); ?>
              </div>
              <div class="next-steps"> 
                <ol>
-                   <li>Follow our journey on <a href="http://www.facebook.com/kolkatafoundation/">Facebook</a> - share with your friends</li>
-                   <li><a href="http://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need</li>
+                   <li>Follow our journey on <a href="https://www.facebook.com/kolkatafoundation/">Facebook</a> - share with your friends</li>
+                   <li><a href="https://www.kolkatafoundation.org/donation-form/">Donate</a> - all your money goes to help those in need</li>
                    <li>Join the team - become part of an awesome movement</li>
                  </ol>
                </div>
