@@ -133,6 +133,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
 
                 <section class="user-info">
                   <input type="text" id="donor-name" placeholder="Donor Name" required  pattern="^\S+$">
+                  <div style="margin:10px"><center><?php do_action( 'anr_captcha_form_field' ) ?></center></div>
                   <input type="submit" name="submit" id="donation" value="DONATE NOW">
                 </section>
 			
