@@ -54,8 +54,7 @@ at <a href="www.facebook.com/kolkatafoundation" target="_blank">www.facebook.com
 and read more about us at <a href="www.kolkatafoundation.org" target="_blank">www.kolkatafoundation.org</a>.
 </p><br/>
 
-<p>Your contribution is tax-deductible to the extent allowed by law. No goods or services were provided in
-exchange for your generous financial donation.</p><br/>
+<p>Your contribution is tax-deductible to the extent allowed by law.</p><br/>
 
 <p>We look forward to your continued support.</p><br/>
 Sincerely,
@@ -76,7 +75,7 @@ function send_thanks($to, $donor_name, $donation_amount, $recurring='', $volunte
 
   $from      = "info@kolkatafoundation.org";
   $treasurer = "nitinkotakkf@gmail.com";
-  $subject   = "TEST: Automatic Thank you from Kolkata Foundation";
+  $subject   = "Thank you from Kolkata Foundation";
   $file_name = "Kolkata Foundation Donation Receipt.pdf";
   $donation_date = date("F j, Y");
 

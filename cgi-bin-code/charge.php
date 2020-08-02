@@ -1,5 +1,6 @@
 <?php
 require_once('../vendor/autoload.php');
+require_once('thanks_mail.php');
 
 include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
 
@@ -12,8 +13,8 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
   $data     = (array) $json_obj;
 
   $token      = $data['stripe-token-id'];
-  $email      = $data['donor-email'];
-  $donor_name = $data['donor-name'] ?: 'Anonymous';
+  $donor_email = $data['donor-email'];
+  $donor_name  = $data['donor-name'] ?: 'Anonymous';
   $donor_zip  = $data['donor-zipcode'];
 
   $fundraiser_id   = $data['fundraiser-id'];
@@ -22,12 +23,12 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
   $recurring       = $data['recurring'];
 
   // Return unless valid email or amount 
-  if (empty($token) or empty($email) or empty($donation_amount)) {
+  if (empty($token) or empty($donor_email) or empty($donation_amount)) {
     return;
   }
 
   $customer = \Stripe\Customer::create(array(
-      'email' => $email,
+      'email' => $donor_email,
       'source'  => $token
   ));
 
@@ -37,7 +38,7 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
           'customer' => $customer->id,
           'amount'   => $charged_amount,
           'currency' => 'usd',
-          'receipt_email' => $email,
+          'receipt_email' => $donor_email,
           'metadata' => array('donor-name' => $donor_name, 'donor-zipcode' => $donor_zip)
       ));
   } else {
@@ -81,7 +82,7 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
            array (
                   'fundraiser_id'   => $fundraiser_id,
                   'donor_name'      => $donor_name,
-                  'donor_email'     => $email,
+                  'donor_email'     => $donor_email,
                   'donation_amount' => $donation_amount,
                   'is_recurring'    => $recurring,
                   'donation_date'   => date('m/d/Y', time()),
@@ -92,44 +93,6 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
   $volunteer_email = $results[0]->email;
   $volunteer_name  = $results[0]->volunteer_names;
 
-  // Send a thank-you email
-  $subject = 'Thank you from Kolkata Foundation';
-  $cc_string = "Cc: nitinkotakkf@gmail.com";
-  $volunteer_string = "";
+  send_thanks($donor_email, $donor_name, $donation_amount, $recurring_frequency, $volunteer_name, $volunteer_email);
 
-  if (!is_null($volunteer_email)) {
-     $cc_string = $cc_string . "," . $volunteer_email;  
-     $volunteer_string = ", as part of the fundraiser organized by " . $volunteer_name; 
-  } 
-  $cc_string .= "\r\n";
-
-  $headers  = 'From: info@kolkatafoundation.org' . "\r\n" . $cc_string . 
-              'Reply-to: info@kolkatafoundation.org';
-
-  $message = <<<MARKER
-
-Dear $donor_name,
-
-Thank you for your generous $recurring_frequency donation of $$donation_amount to Kolkata Foundation$volunteer_string. 
-As a registered 501 c(3) organization (Tax Id # 81-4479308), your donation is tax deductible. This email 
-serves as a receipt for your donation. Your entire donation will go towards supporting our causes in Kolkata.
-
-Please check if your employer will match your donation. We are already enrolled with Benevity and 
-YourCause in order to help this process (and happy to join other platforms).
-
-You can follow us at www.facebook.com/kolkatafoundation to learn about our projects and 
-the impact of your donations. 100% of our administrative costs are borne by our founders, so 
-that your donation can go towards helping those with the greatest need.
-
-We appreciate you spreading the word amongst your friends -- come join us to build a global
-community working together to help the underprivileged in Kolkata.
-
-With gratitude,
-The Kolkata Foundation team
-
-PS: Contact us at info@kolkatafoundation.org to start your own fundraiser.
-MARKER;
-
-    $mail_sent = mail($email, $subject, $message, $headers);
-    return $mail_sent;
 ?>
