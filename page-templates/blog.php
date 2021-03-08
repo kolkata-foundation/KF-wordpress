@@ -14,16 +14,10 @@
 
 get_header(); ?>
     <div class="main-container">
-        <div class="row blog-page-banner">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <img src="https://www.kolkatafoundation.org/wp-content/uploads/2019/08/Aikya-Unnayan.png" width="1140px"></img>
-            </div>
-        </div>        
-        <div class="row blog-page-banner">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h1><?php echo the_title(); ?> </h1> 
-            </div>
-        </div>        
+      <div class="blog-page-banner"> 
+         <img src="https://www.kolkatafoundation.org/wp-content/uploads/2020/10/Ekatra-Unnayan-1.png" width="1140px"></img>
+          <h1><center><?php echo the_title(); ?></center></h1> 
+      </div>        
     </div>
     <div class="spacer"/>
     <div class="main-container ngo-page-content">
