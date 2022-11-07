@@ -12,10 +12,11 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
   $json_obj = json_decode($json_str);
   $data     = (array) $json_obj;
 
-  $token      = $data['stripe-token-id'];
+  $token       = $data['stripe-token-id'];
   $donor_email = $data['donor-email'];
   $donor_name  = $data['donor-name'] ?: 'Anonymous';
-  $donor_zip  = $data['donor-zipcode'];
+  $referred_by = $data['referred-by'] ?: '';
+  $donor_zip   = $data['donor-zipcode'];
 
   $fundraiser_id   = $data['fundraiser-id'];
   $charged_amount  = $data['charged-amount'];
@@ -78,18 +79,19 @@ include '../wp-content/themes/kolkatagives/page-templates/credentials.php';
 
   // Add entries for tracking volunteer campaign donations
   $wpdb->insert(
-           'wp_campaign_donations',
+           'wp3q_campaign_donations',
            array (
                   'fundraiser_id'   => $fundraiser_id,
                   'donor_name'      => $donor_name,
                   'donor_email'     => $donor_email,
                   'donation_amount' => $donation_amount,
                   'is_recurring'    => $recurring,
+                  'referral'        => $referred_by,
                   'donation_date'   => date('m/d/Y', time()),
                 )
   );
 
-  $results = $wpdb->get_results("SELECT * FROM wp_fundraisers WHERE fundraiser_id = " . $fundraiser_id);
+  $results = $wpdb->get_results("SELECT * FROM wp3q_fundraisers WHERE fundraiser_id = " . $fundraiser_id);
   $volunteer_email = $results[0]->email;
   $volunteer_name  = $results[0]->volunteer_names;
 

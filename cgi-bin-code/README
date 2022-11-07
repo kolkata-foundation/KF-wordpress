@@ -1,6 +1,7 @@
-This code goes under public_html/cgi-bin
 
 Copied here so that it can be checked into the same repository - however, this is NOT the
 correct location for this code.
 
-Also, it is possible for files to get out of sync with the code in cgi-bin - BEWARE!!!
+This code goes under public_html/cgi-bin
+ - charge.php
+ - thanks.php

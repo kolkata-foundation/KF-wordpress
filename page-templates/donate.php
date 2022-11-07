@@ -33,13 +33,37 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
   $fundraiser_id = $_COOKIE['kf_fundraiser_id'];
 }
 
+if ($fundraiser_id == 0) {
+  $fundraiser_id = 1; // Set to the general donation
+}
+
+$table_name = $wpdb->prefix . 'fundraisers';
+$result = $wpdb->get_results("SELECT volunteer_names, campaign_pledge, target, fundraiser_id, campaign_id " .
+                             "FROM $table_name WHERE fundraiser_id='" . $fundraiser_id . "'");
+$campaign = $result[0]->volunteer_names;
+
+// Autocomplete on evangelizers
+$table_name = $wpdb->prefix . 'evangelizers';
+$evangelizer_results = $wpdb->get_results("SELECT name,team from " . $table_name);
+$evangelizer_list = "";
+foreach ($evangelizer_results as $key => $row) {
+   $evangelizer_list .= '"' . $row->name . '", ';
+}
 ?>
     <script src="https://checkout.stripe.com/checkout.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script> 
+    $( function() {
+      var evangelizers = [ <?php echo $evangelizer_list ?> ];
+     $( "#referred-by" ).autocomplete({ source: evangelizers });
+    });
+    </script>
     <div class="main-container donation-form" xmlns="https://www.w3.org/1999/html">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donation-col text-center">
+            <div class="donation-col text-center">
                 <section class="text-center donate-info">
+                    <?php echo "<center><h2>Donate to <span style='color:red'>" . $campaign . "</span></h2></center>" ?>
                     <?php  while ( have_posts() ) : the_post(); ?>
                         <?php the_content(); ?>
                     <?php endwhile; // end of the loop. ?>
@@ -133,7 +157,8 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
 
                 <section class="user-info">
                   <input type="text" id="donor-name" placeholder="Donor Name" required  pattern="^\S+$">
-                  <div style="margin:10px"><center><?php do_action( 'anr_captcha_form_field' ) ?></center></div>
+                  <input type="text" id="referred-by" placeholder="Referred by" pattern="^\S+$">
+                  <!-- <div style="margin:10px"><center><?php do_action( 'anr_captcha_form_field' ) ?></center></div> -->
                   <input type="submit" name="submit" id="donation" value="DONATE NOW">
                 </section>
 			
@@ -143,6 +168,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
             function handleStripeToken(token) {
                 var chargedAmount = document.getElementById('charged-amount').value; 
                 var donorName     = document.getElementById('donor-name').value; 
+                var referredBy    = document.getElementById('referred-by').value; 
                 var recurring     = document.getElementById('is_monthly').checked ? 1 : 0;
                 var donationAmount = document.getElementById('donation-amount').value;
                 var fundraiser_id  = document.getElementById('fundraiser-id').value;
@@ -158,6 +184,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                                           'charged-amount': chargedAmount, 'donor-name': donorName,
                                           'donation-amount': donationAmount,
                                           'donor-zipcode': zipcode, 'recurring': recurring,
+                                          'referred-by': referredBy,
                                           'fundraiser-id': fundraiser_id })
                 })
                 .then(response => {
@@ -166,6 +193,7 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                     }
                     alert('Thank you for your donation. Check your email (including the spam folder) for your tax-deducation receipt.');
                     window.location.replace("https://www.kolkatafoundation.org/");
+                    
                     return response.json();
                 })
                 .then(output => {
@@ -173,7 +201,6 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                 .catch(err => {
                 })
             }
-            
 
             var handler = StripeCheckout.configure({
                               key: <?php echo "'" . $stripe['publishable_key'] . "'" ?>,
@@ -183,14 +210,6 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                               description: 'Fight poverty in Kolkata',
                               token: handleStripeToken
                           });
-            
-
-
-
-
-
-
-
 
             document.getElementById('donation').addEventListener('click', function(e) {
                 // seems to change when recurring button pressed
@@ -210,7 +229,6 @@ if ($fundraiser_id == 0 and isset($_COOKIE['kf_fundraiser_id'])) {
                     }
                 }
             
-
                 // Stripe charges 2.2% + $0.30
                 // S = (D+S)*0.022 + 30 => D+S = (D + 30)/0.978
                 var totalAmount = Math.ceil((parseInt(donationAmount + "")*100 + 30)/0.978); // in cents

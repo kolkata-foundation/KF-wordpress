@@ -22,7 +22,7 @@
     $segments = explode("_", $campaign);
     $volunteer = $segments[0];
  
-    $table_name = $wpdb->prefix . 'fundraisers'; 
+    $table_name = $wpdb->prefix . 'fundraisers';
     $result = $wpdb->get_results("SELECT volunteer_names, campaign_pledge, target, fundraiser_id, campaign_id " .
                                  "FROM $table_name WHERE volunteer='" . $volunteer . "'");
 
@@ -77,12 +77,12 @@
 
     <div class="main-container ngo-page-content">
       <div class="row">
-    	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 tabbed">
+    	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 tabbed" style="font-family: 'Roboto', sans-serif; font-size:14px; font-weight:400">
             <?php $project_id = $result[0]->campaign_id; ?>
             <?php echo get_post($project_id)->post_content; ?>
 	</div>
 
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center donate-col">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center donate-col" style="font-family: 'Roboto', sans-serif; font-size:14px; font-weight:400">
              <div>
              <a href="https://kolkatafoundation.org/donation-form/?fundraiser_id=<?php echo $result[0]->fundraiser_id ?>" class="donate-btn">
                  DONATE HERE
@@ -133,5 +133,20 @@
       </div><!-- row -->
     </div><!-- main-container -->
     <div class="spacer"></div> 
+<script>
+	jQuery(document).ready(function ($) {
 
+   $( ".donate-col ul.nav.nav-tabs.nav-justified li:first-child" ).click(function(){
+        $(".donate-col .tab-content #highest").addClass("active");
+        $(".donate-col .tab-content #recent").removeClass("active");
+     });
+
+
+    $( ".donate-col ul.nav.nav-tabs.nav-justified li:nth-child(2)" ).click(function(){
+        $(".donate-col .tab-content #recent").addClass("active");
+        $(".donate-col .tab-content #highest").removeClass("active");
+     });
+
+});
+</script>
 <?php get_footer(); ?>

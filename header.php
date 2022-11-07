@@ -21,6 +21,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -32,10 +33,17 @@
 <link href='<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css' rel='stylesheet' type="text/css">
 <link href='<?php echo get_template_directory_uri(); ?>/style.css' rel='stylesheet' type="text/css"> 
 
+<meta property="og:url"         content="https://www.kolkatafoundation.org/" />
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="Kolkata Foundation" />
+<meta property="og:description" content="Uniting around the world to fight poverty in Kolkata" />
+<meta property="og:image"       content="https://www.kolkatafoundation.org/wp-content/uploads/2020/07/logo-300x84.png" />
+
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
