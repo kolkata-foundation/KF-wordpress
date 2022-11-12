@@ -11,7 +11,7 @@ require_once('vendor/autoload.php');
   global $wp_query;
   global $wpdb;
   $table_name = $wpdb->prefix . 'fundraisers';
-  $fundraiser_results = $wpdb->get_results("SELECT fundraiser_id, volunteer_names FROM $table_name");
+  $fundraiser_results = $wpdb->get_results("SELECT fundraiser_id, volunteer_names FROM $table_name where closed=0");
 ?>
     <div class="main-container">
       <form method="post" action="https://www.kolkatafoundation.org/cgi-bin/update_db.php" class="main-donation-form"> 
@@ -27,9 +27,11 @@ require_once('vendor/autoload.php');
           <input type="text" id="referred-by" name="referred-by" placeholder="Referred by">
           <input type="text" id="donation-amount" name="donation-amount" placeholder="Amount" pattern="^\d+$">
           <input type="email" id="donor-email" name="donor-email" placeholder="Email">
+          <input type="text" id="secret" name="secret" placeholder="Secret">
           <input type="checkbox" id="recurring" name="recurring"> <label for="recurring">Recurring</label>
-          <label for="donation-date">Donation Date</label>
-          <input type="date" id="donation-date" name="donation-date" value="2022-11-04" min="2022-11-04" max="2025-12-31">
+          <input type="checkbox" id="pledge" name="pledge"> <label for="recurring">Pledge</label>
+          <input type="checkbox" id="thank-donor" name="thank-donor"> <label for="recurring">Thank Donor</label>
+          <input type="date" id="donation-date" name="donation-date" value="2022-11-04" min="2022-11-04" max="2025-12-31"><label for="donation-date">Donation Date</label>
           <input type="submit" name="submit" id="donation" value="Insert">
         </section>
       
